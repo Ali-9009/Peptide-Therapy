@@ -3,6 +3,7 @@ import { CheckCircle } from "lucide-react";
 import Button from "../components/PrimaryBtn";
 import CTA from "../components/Cta";
 import FAQ from "../components/Faq";
+import ImageLoader from "../components/ImageLoader";
 
 const benefits = [
     {
@@ -70,10 +71,10 @@ export default function GHK_CU() {
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">
-                            <img
+                            <ImageLoader
                                 src="assets/ghk-1.png"
-                                alt="CJC-1295 Peptide"
-                                className="rounded"
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
 
@@ -155,10 +156,10 @@ export default function GHK_CU() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4">
 
                         <div className="order-1 lg:order-1 flex justify-center">
-                            <img
+                            <ImageLoader
                                 src="assets/ghk-2.png"
-                                alt="CJC-1295 Peptide"
-                                className="rounded"
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
 
@@ -233,10 +234,10 @@ export default function GHK_CU() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4">
 
                         <div className="order-1 lg:order-2 flex justify-center">
-                            <img
+                            <ImageLoader
                                 src="assets/ghk-3.png"
-                                alt="CJC-1295 Peptide"
-                                className="rounded"
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
 
@@ -278,10 +279,10 @@ export default function GHK_CU() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4">
 
                         <div className="order-1 lg:order-1 flex justify-center">
-                            <img
+                            <ImageLoader
                                 src="assets/ghk-4.png"
-                                alt="CJC-1295 Peptide"
-                                className="rounded"
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
 

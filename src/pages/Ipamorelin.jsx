@@ -41,7 +41,7 @@ const items = [
     "Studied for effects on lipid metabolism and fat distribution patterns",
 ];
 
-export default function Tesamorelin() {
+export default function Ipamorelin() {
     return (
         <>
             <section className="py-12 px-4">
@@ -52,22 +52,22 @@ export default function Tesamorelin() {
                         {/* TEXT */}
                         <div className="order-2 lg:order-1">
                             <h1 className="heading">
-                                Tesamorelin
+                                Ipamorelin
                             </h1>
                             <p className="text font-semibold mt-2">
                                 Recovery-focused peptide support designed to assist mobility, repair, and resilience.
                             </p>
                             <p className="text mt-2">
-                                Tesamorelin is researched for its role in supporting recovery processes, tissue repair signaling, and overall physical resilience. Rather than forcing unnatural stimulation, the focus is on helping the body maintain efficient recovery, flexibility, and performance support through regenerative and recovery-oriented pathways.
+                                Ipamorelin is researched for its role in supporting recovery processes, tissue repair signaling, and overall physical resilience. Rather than forcing unnatural stimulation, the focus is on helping the body maintain efficient recovery, flexibility, and performance support through regenerative and recovery-oriented pathways.
                             </p>
-                            <Button text="Purchase Tesamorelin Now" className="mt-4" />
+                            <Button text="Purchase Ipamorelin Now" className="mt-4" />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">
                             <ImageLoader
-                                src="assets/tes-1.png"
+                                src="assets/ipa-1.png"
                                 alt="cover image"
-                                className="w-full h-full object-cover rounded-xl"
+                                className="w-full h-full object-cover rounded-2xl"
                             />
                         </div>
 
@@ -80,12 +80,21 @@ export default function Tesamorelin() {
                 <div className="max-w-6xl mx-auto">
 
                     {/* TOP SECTION */}
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-10">
+                    <div className="flex flex-col md:flex-row items-center justify-center gap-6">
+
+                        {/* Right image */}
+                        <div className="shrink-0">
+                            <ImageLoader
+                                src="assets/ipa-2.png"
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-2xl"
+                            />
+                        </div>
 
                         {/* Left content */}
-                        <div className="max-w-2xl">
+                        <div className="max-w-xl">
                             <h2 className="heading">
-                                Key Potential Benefits of Tesamorelin
+                                Key Potential Benefits of Ipamorelin
                             </h2>
 
                             <p className="text mt-4">
@@ -93,14 +102,6 @@ export default function Tesamorelin() {
                             </p>
                         </div>
 
-                        {/* Right image */}
-                        <div className="shrink-0">
-                            <ImageLoader
-                                src="assets/tes-2.png"
-                                alt="cover image"
-                                className="w-full h-full object-cover rounded-xl"
-                            />
-                        </div>
                     </div>
 
                     {/* CARDS */}
@@ -124,7 +125,7 @@ export default function Tesamorelin() {
 
                     {/* BUTTON */}
                     <div className="mt-12 flex justify-center">
-                        <Button text="Purchase Tesamorelin Now" />
+                        <Button text="Purchase Ipamorelin Now" />
                     </div>
 
                 </div>
@@ -137,15 +138,15 @@ export default function Tesamorelin() {
 
                         <div className="order-1 lg:order-1 flex justify-center">
                             <ImageLoader
-                                src="assets/tes-3.png"
+                                src="assets/ipa-3.png"
                                 alt="cover image"
-                                className="w-full h-full object-cover rounded-xl"
+                                className="w-full h-full object-cover rounded-2xl"
                             />
                         </div>
 
                         <div className="order-2 lg:order-2">
                             <h1 className="heading">
-                                Potential Benefits of Tesamorelin
+                                Potential Benefits of Ipamorelin
                             </h1>
 
                             <div className="py-2">
@@ -162,7 +163,7 @@ export default function Tesamorelin() {
                                 ))}
                             </div>
 
-                            <Button text="Purchase Tesamorelin Now" className="mt-4" />
+                            <Button text="Purchase Ipamorelin Now" className="mt-4" />
                         </div>
 
                     </div>

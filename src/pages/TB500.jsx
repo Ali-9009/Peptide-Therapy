@@ -3,6 +3,7 @@ import { CheckCircle } from "lucide-react";
 import Button from "../components/PrimaryBtn";
 import CTA from "../components/Cta";
 import FAQ from "../components/Faq";
+import ImageLoader from "../components/ImageLoader";
 
 const benefits = [
     {
@@ -58,10 +59,10 @@ export default function TB_500() {
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">
-                            <img
+                            <ImageLoader
                                 src="assets/tb-1.png"
-                                alt="ss-31 Peptide"
-                                className="rounded"
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
 
@@ -109,10 +110,10 @@ export default function TB_500() {
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4">
 
                         <div className="order-1 lg:order-1 flex justify-center">
-                            <img
+                            <ImageLoader
                                 src="assets/tb-2.png"
-                                alt="CJC-1295 Peptide"
-                                className="rounded"
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
 
@@ -170,17 +171,17 @@ export default function TB_500() {
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">
-                            <img
+                            <ImageLoader
                                 src="assets/tb-3.png"
-                                alt="ss-31 Peptide"
-                                className="rounded"
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
 
                     </div>
 
                 </div>
-            </section>         
+            </section>
 
             <FAQ />
 

@@ -9,13 +9,13 @@ export default function CTA() {
                     Ready to get started?
                 </h2>
 
-                <p className="text-gray-700 font-md mb-6">
+                <p className="text-gray-700 font-md">
                     Join now and unlock full access in just a few clicks.
                 </p>
 
-                <div className="flex gap-4 justify-center">
+                {/* <div className="flex gap-4 justify-center">
                     <Button text="Purchase BPC-157 Now" />
-                </div>
+                </div> */}
 
             </div>
         </section>

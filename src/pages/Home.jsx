@@ -1,6 +1,7 @@
 import { CheckCircle, ShoppingCart } from "lucide-react";
 import Button from "../components/PrimaryBtn";
 import CTA from "../components/Cta";
+import ImageLoader from "../components/ImageLoader";
 
 
 const benefits = [
@@ -44,7 +45,7 @@ const items = [
     "Option to add labs/medical review separately if you want more personalized oversight",
 ];
 export default function Home() {
-    
+
     return (
         <>
             <section className="relative min-h-175 flex items-center justify-center text-center text-white overflow-hidden">
@@ -95,10 +96,10 @@ export default function Home() {
 
                         {/* Right image */}
                         <div className="shrink-0">
-                            <img
+                            <ImageLoader
                                 src="assets/bpc-1.jpg"
-                                alt="BPC-157 Bottle"
-                                className=""
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
                     </div>
@@ -161,12 +162,11 @@ export default function Home() {
 
                     {/* RIGHT SIDE */}
                     <div className="flex justify-center">
-                            <img
-                                src="assets/bpc-2.png"
-                                alt="Candidate"
-                                className=""
-                            />
-                     
+                        <ImageLoader
+                            src="assets/bpc-2.png"
+                            alt="cover image"
+                            className="w-full h-full object-cover rounded-xl"
+                        />
                     </div>
 
                 </div>
@@ -182,10 +182,10 @@ export default function Home() {
                     <div className="grid md:grid-cols-2 gap-10 items-center">
 
                         <div className="flex justify-center">
-                            <img
+                            <ImageLoader
                                 src="assets/bpc-3.jpg"
-                                alt="Product"
-                                className=""
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
 
@@ -213,6 +213,6 @@ export default function Home() {
 
             <CTA />
         </>
-        
+
     );
 }

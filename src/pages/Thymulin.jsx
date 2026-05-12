@@ -29,7 +29,7 @@ const items = [
     "Studied for its role in tissue protection and recovery pathways",
 ];
 
-export default function SS_31() {
+export default function Thymulin() {
     return (
         <>
             <section className="py-12 px-4">
@@ -40,22 +40,22 @@ export default function SS_31() {
                         {/* TEXT */}
                         <div className="order-2 lg:order-1">
                             <h1 className="heading">
-                                SS:31
+                                Thymulin
                             </h1>
                             <p className="text font-semibold mt-2">
                                 Mitochondrial support designed to help optimize cellular energy and recovery.
                             </p>
                             <p className="text mt-2">
-                                SS:31 is researched for its role in supporting mitochondrial function — the energy-producing systems inside your cells. Rather than overstimulating the body, the focus is on improving cellular efficiency, resilience, and recovery support through targeted mitochondrial protection and performance optimization.
+                                Thymulin is researched for its role in supporting mitochondrial function — the energy-producing systems inside your cells. Rather than overstimulating the body, the focus is on improving cellular efficiency, resilience, and recovery support through targeted mitochondrial protection and performance optimization.
                             </p>
-                            <Button text="Purchase SS:31 Now" className="mt-4" />
+                            <Button text="Purchase Thymulin Now" className="mt-4" />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">
                             <ImageLoader
-                                src="assets/ss-1.png"
+                                src="assets/thy-1.png"
                                 alt="cover image"
-                                className="w-full h-full object-cover rounded-xl"
+                                className="w-full h-full object-cover rounded-2xl"
                             />
                         </div>
 
@@ -69,7 +69,7 @@ export default function SS_31() {
 
                     {/* TITLE */}
                     <h2 className="heading text-center mb-10">
-                        What SS:31 is (and what it isn’t)
+                        What Thymulin is (and what it isn’t)
                     </h2>
 
                     {/* CARDS WRAPPER */}
@@ -125,7 +125,7 @@ export default function SS_31() {
 
                     {/* CTA */}
                     <div className="flex justify-center mt-8">
-                        <Button text="Purchase SS:31 Now" className="mt-4" />
+                        <Button text="Purchase Thymulin Now" className="mt-4" />
                     </div>
 
                 </div>
@@ -138,9 +138,9 @@ export default function SS_31() {
 
                         <div className="order-1 lg:order-1 flex justify-center">
                             <ImageLoader
-                                src="assets/ss-2.png"
+                                src="assets/thy-2.png"
                                 alt="cover image"
-                                className="w-full h-full object-cover rounded-xl"
+                                className="w-full h-full object-cover rounded-2xl"
                             />
                         </div>
 
@@ -163,7 +163,7 @@ export default function SS_31() {
                                 ))}
                             </div>
 
-                            <Button text="Purchase SS:31 Now" className="mt-4" />
+                            <Button text="Purchase Thymulin Now" className="mt-4" />
                         </div>
 
                     </div>
@@ -198,7 +198,7 @@ export default function SS_31() {
 
                     {/* BUTTON */}
                     <div className="mt-12 flex justify-center">
-                        <Button text="Purchase SS:31 Now" />
+                        <Button text="Purchase Thymulin Now" />
                     </div>
 
                 </div>

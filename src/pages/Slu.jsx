@@ -12,8 +12,9 @@ import {
 import Button from "../components/PrimaryBtn";
 import CTA from "../components/Cta";
 import FAQ from "../components/Faq";
+import ImageLoader from "../components/ImageLoader";
 
-export default function CJC1295() {
+export default function SLU_PP() {
     return (
         <>
             <section className="py-12 px-4">
@@ -24,26 +25,22 @@ export default function CJC1295() {
                         {/* TEXT */}
                         <div className="order-2 lg:order-1">
                             <h1 className="heading">
-                                CJC-1295
+                                SLU-PP-322
                             </h1>
                             <p className="text font-semibold mt-2">
-                                Sleep-driven recovery and resilience available for direct purchase.
+                                Advanced metabolic support and performance optimization available for direct purchase.
                             </p>
                             <p className="text mt-2">
-                                CJC-1295 is primarily used to support overnight recovery by promoting
-                                the body’s natural growth hormone (GH) signaling through a GHRH pathway.
-                                The goal isn’t “more hormone” it’s better sleep-driven recovery,
-                                improved resilience, and consistency with realistic expectations and
-                                safety-first decision-making.
+                                SLU-PP-322 is primarily used to support metabolic activity, endurance, and energy utilization through pathways associated with mitochondrial performance and fat metabolism. The focus isn’t extreme transformation — it’s steady support for performance, recovery, and long-term consistency with realistic expectations and a safety-first approach.
                             </p>
-                            <Button text="Purchase CJC-1295 Now" className="mt-4" />
+                            <Button text="Purchase SLU-PP-322 Now" className="mt-4" />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">
-                            <img
-                                src="assets/cjc-1.png"
-                                alt="CJC-1295 Peptide"
-                                className="rounded"
+                            <ImageLoader
+                                src="assets/slu-1.png"
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
 
@@ -102,7 +99,7 @@ export default function CJC1295() {
 
                     {/* CTA */}
                     <div className="flex justify-center mt-10">
-                        <Button text="Purchase CJC-1295 Now" />
+                        <Button text="Purchase SLU-PP-322 Now" />
                     </div>
 
                 </div>
@@ -111,13 +108,13 @@ export default function CJC1295() {
             <section className="py-12 px-4">
                 <div className="max-w-6xl mx-auto">
 
-                    <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-8">
 
                         <div className="order-1 lg:order-1 flex justify-center">
-                            <img
-                                src="assets/cjc-2.png"
-                                alt="CJC-1295 Peptide"
-                                className="rounded"
+                            <ImageLoader
+                                src="assets/slu-2.png"
+                                alt="cover image"
+                                className="w-full h-full object-cover rounded-2xl"
                             />
                         </div>
 
@@ -138,7 +135,7 @@ export default function CJC1295() {
                             <p className="text">
                                 Good fit if recovery is slowing despite solid habits and you want structured support.
                             </p>
-                            <Button text="Purchase CJC-1295 Now" className="mt-4" />
+                            <Button text="Purchase SLU-PP-322 Now" className="mt-4" />
                         </div>
 
                     </div>
