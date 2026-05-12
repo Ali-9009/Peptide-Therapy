@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Geom:ital,wght@0,300..900;1,300..900&display=swap');
+@reference "tailwindcss";
+
+body {
+    font-family: 'Geom', sans-serif;
+}
+
+
+
+.heading {
+    @apply lg:text-5xl md:text-4xl text-3xl font-semibold;
+}
+
+.text {
+    @apply text-sm md:text-base text-gray-600 leading-relaxed
+}
