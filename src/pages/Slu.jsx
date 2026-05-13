@@ -9,15 +9,25 @@ import {
     ShoppingCart,
 } from "lucide-react";
 
+import { CheckCircle } from "lucide-react";
+import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
+import { products } from "../product/data";
+
 import Button from "../components/PrimaryBtn";
 import CTA from "../components/Cta";
 import FAQ from "../components/Faq";
 import ImageLoader from "../components/ImageLoader";
 
 export default function SLU_PP() {
+
+    const navigate = useNavigate();
+    const { addToCart } = useCart();
+    const product = products.slu;
+
     return (
         <>
-            <section className="py-12 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-4">
@@ -33,7 +43,14 @@ export default function SLU_PP() {
                             <p className="text mt-2">
                                 SLU-PP-322 is primarily used to support metabolic activity, endurance, and energy utilization through pathways associated with mitochondrial performance and fat metabolism. The focus isn’t extreme transformation — it’s steady support for performance, recovery, and long-term consistency with realistic expectations and a safety-first approach.
                             </p>
-                            <Button text="Purchase SLU-PP-322 Now" className="mt-4" />
+                            <Button
+                                text="Purchase SLU-PP-322 Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">
@@ -49,7 +66,7 @@ export default function SLU_PP() {
                 </div>
             </section>
 
-            <section className="px-4 py-6">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     {/* TITLE */}
@@ -99,13 +116,20 @@ export default function SLU_PP() {
 
                     {/* CTA */}
                     <div className="flex justify-center mt-10">
-                        <Button text="Purchase SLU-PP-322 Now" />
+                        <Button
+                            text="Purchase SLU-PP-322 Now"
+                            className="mt-4"
+                            onClick={() => {
+                                addToCart(product);
+                                navigate("/cart");
+                            }}
+                        />
                     </div>
 
                 </div>
             </section>
 
-            <section className="py-12 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-8">
@@ -135,7 +159,14 @@ export default function SLU_PP() {
                             <p className="text">
                                 Good fit if recovery is slowing despite solid habits and you want structured support.
                             </p>
-                            <Button text="Purchase SLU-PP-322 Now" className="mt-4" />
+                            <Button
+                                text="Purchase SLU-PP-322 Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                     </div>

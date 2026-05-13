@@ -1,4 +1,7 @@
 import { CheckCircle } from "lucide-react";
+import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
+import { products } from "../product/data";
 
 import Button from "../components/PrimaryBtn";
 import CTA from "../components/Cta";
@@ -49,9 +52,14 @@ const items3 = [
 ];
 
 export default function GHK_CU() {
+    
+    const navigate = useNavigate();
+    const { addToCart } = useCart();
+    const product = products.ghk;
+
     return (
         <>
-            <section className="py-12 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-4">
@@ -67,7 +75,14 @@ export default function GHK_CU() {
                             <p className="text mt-2">
                                 GHK-Cu is primarily used to support skin renewal and visible skin quality especially firmness, texture, and the appearance of fine lines by supporting collagen-related pathways and overall skin recovery. It’s widely recognized in advanced skincare for its “repair forward” positioning and is often chosen when you want results that look natural, not overdone.
                             </p>
-                            <Button text="Purchase GHK-Cu Now" className="mt-4" />
+                            <Button
+                                text="Purchase GHK-Cu Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">
@@ -83,8 +98,8 @@ export default function GHK_CU() {
                 </div>
             </section>
 
-            <section className="px-4 py-12">
-                <div className="max-w-5xl mx-auto">
+            <section className="md:py-12 py-6 px-4">
+                <div className="max-w-6xl mx-auto">
 
                     {/* TITLE */}
                     <h2 className="heading text-center mb-10">
@@ -144,13 +159,20 @@ export default function GHK_CU() {
 
                     {/* CTA */}
                     <div className="flex justify-center mt-8">
-                        <Button text="Purchase GHK-Cu Now" className="mt-4" />
+                        <Button
+                            text="Purchase GHK-Cu Now"
+                            className="mt-4"
+                            onClick={() => {
+                                addToCart(product);
+                                navigate("/cart");
+                            }}
+                        />
                     </div>
 
                 </div>
             </section>
 
-            <section className="py-6 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4">
@@ -187,7 +209,21 @@ export default function GHK_CU() {
                             <p className="text">
                                 GHK-Cu is often chosen when your skincare routine feels “stuck” and you want a more regenerative, recovery-based approach.
                             </p>
-                            <Button text="Purchase GHK-Cu Now" className="mt-4" />
+                            <Button
+                                text="Purchase GHK-Cu Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart({
+                                        id: "ghk-cu",
+                                        name: "GHK-Cu",
+                                        subtitle: "Copper Peptide",
+                                        price: 89,
+                                        image: "assets/ghk-1.png",
+                                    });
+
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                     </div>
@@ -195,7 +231,7 @@ export default function GHK_CU() {
                 </div>
             </section>
 
-            <section className="py-12 px-6">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <h2 className="heading text-center mb-10">
@@ -222,13 +258,20 @@ export default function GHK_CU() {
 
                     {/* BUTTON */}
                     <div className="mt-12 flex justify-center">
-                        <Button text="Purchase GHK-Cu Now" />
+                        <Button
+                            text="Purchase GHK-Cu Now"
+                            className="mt-4"
+                            onClick={() => {
+                                addToCart(product);
+                                navigate("/cart");
+                            }}
+                        />
                     </div>
 
                 </div>
             </section>
 
-            <section className="py-12 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4">
@@ -265,7 +308,21 @@ export default function GHK_CU() {
                             <p className="text">
                                 Important: These are potential benefits based on available research and cosmetic/clinical discussion—not guaranteed outcomes.
                             </p>
-                            <Button text="Purchase GHK-Cu Now" className="mt-4" />
+                            <Button
+                                text="Purchase GHK-Cu Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart({
+                                        id: "ghk-cu",
+                                        name: "GHK-Cu",
+                                        subtitle: "Copper Peptide",
+                                        price: 89,
+                                        image: "assets/ghk-1.png",
+                                    });
+
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                     </div>
@@ -273,7 +330,7 @@ export default function GHK_CU() {
                 </div>
             </section>
 
-            <section className="py-6 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4">
@@ -310,7 +367,21 @@ export default function GHK_CU() {
                             <p className="text">
                                 Tested athletes: GHK-Cu isn’t positioned as a performance drug, but if you’re tested, it’s still smart to check your governing body’s current rules and ingredient policies.
                             </p>
-                            <Button text="Purchase GHK-Cu Now" className="mt-4" />
+                            <Button
+                                text="Purchase GHK-Cu Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart({
+                                        id: "ghk-cu",
+                                        name: "GHK-Cu",
+                                        subtitle: "Copper Peptide",
+                                        price: 89,
+                                        image: "assets/ghk-1.png",
+                                    });
+
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                     </div>
@@ -318,8 +389,8 @@ export default function GHK_CU() {
                 </div>
             </section>
 
-            <section className="px-4 py-12">
-                <div className="max-w-5xl mx-auto">
+            <section className="md:py-12 py-6 px-4">
+                <div className="max-w-6xl mx-auto">
 
                     {/* TITLE */}
                     <h2 className="heading text-center mb-10">
@@ -414,7 +485,14 @@ export default function GHK_CU() {
 
                     {/* CTA */}
                     <div className="flex justify-center mt-8">
-                        <Button text="Purchase GHK-Cu Now" className="mt-4" />
+                        <Button
+                            text="Purchase GHK-Cu Now"
+                            className="mt-4"
+                            onClick={() => {
+                                addToCart(product);
+                                navigate("/cart");
+                            }}
+                        />
                     </div>
 
                 </div>

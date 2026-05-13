@@ -1,4 +1,7 @@
 import { CheckCircle } from "lucide-react";
+import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
+import { products } from "../product/data";
 
 import Button from "../components/PrimaryBtn";
 import CTA from "../components/Cta";
@@ -42,9 +45,14 @@ const items = [
 ];
 
 export default function Ipamorelin() {
+
+    const navigate = useNavigate();
+    const { addToCart } = useCart();
+    const product = products.ipa;
+
     return (
         <>
-            <section className="py-12 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-4">
@@ -60,7 +68,14 @@ export default function Ipamorelin() {
                             <p className="text mt-2">
                                 Ipamorelin is researched for its role in supporting recovery processes, tissue repair signaling, and overall physical resilience. Rather than forcing unnatural stimulation, the focus is on helping the body maintain efficient recovery, flexibility, and performance support through regenerative and recovery-oriented pathways.
                             </p>
-                            <Button text="Purchase Ipamorelin Now" className="mt-4" />
+                            <Button
+                                text="Purchase Ipamorelin Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">
@@ -76,33 +91,8 @@ export default function Ipamorelin() {
                 </div>
             </section>
 
-            <section className="py-12 px-6">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
-
-                    {/* TOP SECTION */}
-                    <div className="flex flex-col md:flex-row items-center justify-center gap-6">
-
-                        {/* Right image */}
-                        <div className="shrink-0">
-                            <ImageLoader
-                                src="assets/ipa-2.png"
-                                alt="cover image"
-                                className="w-full h-full object-cover rounded-2xl"
-                            />
-                        </div>
-
-                        {/* Left content */}
-                        <div className="max-w-xl">
-                            <h2 className="heading">
-                                Key Potential Benefits of Ipamorelin
-                            </h2>
-
-                            <p className="text mt-4">
-                                Important: These are potential benefits based on clinical research and discussion — not guaranteed outcomes.
-                            </p>
-                        </div>
-
-                    </div>
 
                     {/* CARDS */}
                     <div className="mt-14 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
@@ -125,13 +115,20 @@ export default function Ipamorelin() {
 
                     {/* BUTTON */}
                     <div className="mt-12 flex justify-center">
-                        <Button text="Purchase Ipamorelin Now" />
+                        <Button
+                            text="Purchase Ipamorelin Now"
+                            className="mt-4"
+                            onClick={() => {
+                                addToCart(product);
+                                navigate("/cart");
+                            }}
+                        />
                     </div>
 
                 </div>
             </section>
 
-            <section className="py-6 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4">
@@ -163,7 +160,14 @@ export default function Ipamorelin() {
                                 ))}
                             </div>
 
-                            <Button text="Purchase Ipamorelin Now" className="mt-4" />
+                            <Button
+                                text="Purchase Ipamorelin Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                     </div>

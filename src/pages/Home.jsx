@@ -1,7 +1,12 @@
-import { CheckCircle, ShoppingCart } from "lucide-react";
+import { CheckCircle } from "lucide-react";
+import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
+import { products } from "../product/data";
+
 import Button from "../components/PrimaryBtn";
 import CTA from "../components/Cta";
 import ImageLoader from "../components/ImageLoader";
+import Products from "../components/Products";
 
 
 const benefits = [
@@ -46,6 +51,10 @@ const items = [
 ];
 export default function Home() {
 
+    const navigate = useNavigate();
+    const { addToCart } = useCart();
+    const product = products.bpc;
+
     return (
         <>
             <section className="relative min-h-175 flex items-center justify-center text-center text-white overflow-hidden">
@@ -69,11 +78,19 @@ export default function Home() {
                         BPC-157 is a synthetic peptide originally identified in gastric juice research and discussed for its potential role in tissue repair, digestive lining support, and recovery-related signaling. Evidence is still emerging, so it's best viewed as investigational and used responsibly with safety in mind.
                     </p>
                     <div className="mt-6 flex justify-center">
-                        <Button text="Purchase BPC-157 Now" />
+                        <Button
+                            text="Purchase BPC-157 Now"
+                            onClick={() => {
+                                addToCart(product);
+                                navigate("/cart");
+                            }}
+                        />
                     </div>
 
                 </div>
             </section>
+
+            <Products />
 
             <section className="py-12 px-6">
                 <div className="max-w-6xl mx-auto">
@@ -125,7 +142,13 @@ export default function Home() {
 
                     {/* BUTTON */}
                     <div className="mt-12 flex justify-center">
-                        <Button text="Purchase BPC-157 Now" />
+                        <Button
+                            text="Purchase BPC-157 Now"
+                            onClick={() => {
+                                addToCart(product);
+                                navigate("/cart");
+                            }}
+                        />
                     </div>
 
                 </div>
@@ -203,8 +226,13 @@ export default function Home() {
                                 </div>
                             ))}
 
-                            {/* BUTTON */}
-                            <Button text="Purchase BPC-157 Now" />
+                            <Button
+                                text="Purchase BPC-157 Now"
+                                onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                            />
 
                         </div>
                     </div>

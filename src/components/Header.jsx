@@ -1,6 +1,23 @@
 import { useState, useEffect, useRef } from "react";
-import { X, Phone, Mail, ChevronDown, Logs } from "lucide-react";
+import {
+    X,
+    Phone,
+    Mail,
+    ChevronDown,
+    ChevronLeft,
+    ChevronRight,
+    Logs,
+    ShoppingCart
+} from "lucide-react";
+
 import { Link, NavLink } from "react-router-dom";
+
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Grid } from "swiper/modules";
+
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/grid";
 
 import Button from "./PrimaryBtn";
 
@@ -55,6 +72,90 @@ export default function Header() {
             link: "/thymulin",
             desc: "Skin & recovery support peptide",
         },
+        {
+            name: "Kisspetin",
+            img: "assets/kis-1.png",
+            link: "/kisspetin",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "Retatrutide",
+            img: "assets/ret-1.png",
+            link: "/retatrutide",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "Semaglutide",
+            img: "assets/sem-1.png",
+            link: "/semaglutide",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "Tirzepatide",
+            img: "assets/tir-1.png",
+            link: "/tirzepatide",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "5-AMINO-1MQ",
+            img: "assets/ami-1.png",
+            link: "/5-amino-1mq",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "Melanotan",
+            img: "assets/mel-1.png",
+            link: "/melanotan",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "MOTS-c",
+            img: "assets/mot-1.png",
+            link: "/mots-c",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "PT141",
+            img: "assets/pt-1.png",
+            link: "/pt-141",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "KPV",
+            img: "assets/kp-1.png",
+            link: "/kpv",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "Nad+",
+            img: "assets/nad-1.png",
+            link: "/nad+",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "CIC-1295",
+            img: "assets/cic-1.png",
+            link: "/cic-1295",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "Epithalon",
+            img: "assets/epi-1.png",
+            link: "/epithalon",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "AOD-9604",
+            img: "assets/aod-1.png",
+            link: "/aod-9604",
+            desc: "Skin & recovery support peptide",
+        },
+        {
+            name: "Bac.water",
+            img: "assets/bac-1.png",
+            link: "/bac-water",
+            desc: "Skin & recovery support peptide",
+        },
     ];
 
     // ================= NAV LINKS =================
@@ -69,10 +170,9 @@ export default function Header() {
             path: "#",
             mega: true,
         },
-
         {
-            name: "About",
-            path: "#",
+            name: "Contact Us",
+            path: "/contact",
         },
     ];
 
@@ -99,7 +199,7 @@ export default function Header() {
                 <div className="max-w-7xl mx-auto flex justify-between items-center px-4 py-2">
 
                     {/* LEFT */}
-                    <div className="flex items-center gap-6">
+                    <div className="flex items-center md:gap-4 gap-4">
 
                         <a
                             href="tel:3052656226"
@@ -108,11 +208,11 @@ export default function Header() {
                             <Phone size={15} />
 
                             <span>
-                                305.265.6226
+                                +1 (555) 240-0188
                             </span>
                         </a>
 
-                        <a href="mailto:info@gmail.com" className="hidden sm:flex items-center gap-2 hover:opacity-80 transition">
+                        <a href="mailto:info@gmail.com" className="flex items-center gap-2 hover:opacity-80 transition">
                             <Mail size={15} />
                             <span>
                                 info@gmail.com
@@ -121,7 +221,7 @@ export default function Header() {
                     </div>
 
                     {/* RIGHT */}
-                    <div className="hidden md:flex items-center gap-4 text-lg">
+                    <div className="flex items-center md:gap-4 gap-2 text-lg">
 
                         <a href="#">
                             <i className="ri-facebook-fill"></i>
@@ -203,75 +303,126 @@ export default function Header() {
                                     {/* ================= MEGA MENU ================= */}
                                     <div
                                         className={`
-                                            absolute top-full left-1/2 -translate-x-1/2 pt-6
-                                            transition-all duration-300
-                                            ${megaOpen
+        absolute top-full left-1/2 -translate-x-1/2 pt-6
+        transition-all duration-300
+        ${megaOpen
                                                 ? "opacity-100 visible translate-y-0"
                                                 : "opacity-0 invisible -translate-y-3"
                                             }
-                                        `}
+    `}
                                     >
 
-                                        <div className="w-155 bg-white border border-gray-300 shadow-[0_10px_60px_rgba(0,0,0,0.08)] rounded-3xl p-6">
+                                        <div className="relative w-280 bg-white border border-gray-200 shadow-[0_10px_60px_rgba(0,0,0,0.08)] rounded-3xl p-7">
 
-                                            {/* TITLE */}
-                                            <div className="mb-6">
+                                            {/* HEADER */}
+                                            <div className="flex items-center justify-between mb-7">
 
-                                                <p className="text-xl font-semibold text-gray-900">
-                                                    Featured Peptides
-                                                </p>
+                                                <div>
+                                                    <p className="text-2xl font-semibold text-gray-900">
+                                                        Featured Peptides
+                                                    </p>
 
-                                                <p className="text-sm text-gray-500 mt-1">
-                                                    Explore our premium peptide collection
-                                                </p>
+                                                    <p className="text-sm text-gray-500 mt-1">
+                                                        Explore our premium peptide collection
+                                                    </p>
+                                                </div>
+
+                                                {/* ARROWS */}
+                                                <div className="flex items-center gap-3">
+
+                                                    <button
+                                                        className="
+                        mega-prev
+                        w-11 h-11 rounded-full
+                        border border-gray-200
+                        flex items-center justify-center
+                        hover:bg-gray-100
+                        transition
+                    "
+                                                    >
+                                                        <ChevronLeft size={20} />
+                                                    </button>
+
+                                                    <button
+                                                        className="
+                        mega-next
+                        w-11 h-11 rounded-full
+                        border border-gray-200
+                        flex items-center justify-center
+                        hover:bg-gray-100
+                        transition
+                    "
+                                                    >
+                                                        <ChevronRight size={20} />
+                                                    </button>
+                                                </div>
                                             </div>
 
-                                            {/* GRID */}
-                                            <div className="grid grid-cols-2 gap-4">
+                                            {/* SWIPER */}
+                                            <Swiper
+                                                modules={[Navigation, Grid]}
+                                                navigation={{
+                                                    prevEl: ".mega-prev",
+                                                    nextEl: ".mega-next",
+                                                }}
+                                                spaceBetween={18}
+                                                slidesPerView={3}
+                                                grid={{
+                                                    rows: 3,
+                                                    fill: "row",
+                                                }}
+                                                className="mega-swiper `!pb-1`"
+                                            >
 
                                                 {products.map((p, idx) => (
-                                                    <Link
-                                                        key={idx}
-                                                        to={p.link}
-                                                        className="
-                                                            group
-                                                            flex items-center gap-3
-                                                            p-3 rounded-2xl
-                                                            hover:bg-gray-50
-                                                            transition-all duration-300
-                                                        "
-                                                    >
+                                                    <SwiperSlide key={idx}>
 
-                                                        {/* IMAGE */}
-                                                        <div className="overflow-hidden rounded-xl shrink-0">
+                                                        <Link
+                                                            to={p.link}
+                                                            className="
+                            group
+                            flex items-center gap-4
+                            p-4 rounded-2xl
+                            border border-gray-100
+                            hover:border-gray-300
+                            hover:bg-gray-50
+                            transition-all duration-300
+                            h-27
+                        "
+                                                        >
 
-                                                            <img
-                                                                src={p.img}
-                                                                alt={p.name}
-                                                                className="
-                                                                    w-14 h-14
-                                                                    rounded-xl
-                                                                    object-cover
-                                                                    group-hover:scale-105
-                                                                    transition duration-300
-                                                                "
-                                                            />
-                                                        </div>
+                                                            {/* IMAGE */}
+                                                            <div className="overflow-hidden rounded-2xl shrink-0 bg-gray-100 p-2">
 
-                                                        {/* TEXT */}
-                                                        <div>
+                                                                <img
+                                                                    src={p.img}
+                                                                    alt={p.name}
+                                                                    className="
+                                    w-16 h-16
+                                    object-cover
+                                    rounded-xl
+                                    group-hover:scale-105
+                                    transition duration-300
+                                "
+                                                                />
+                                                            </div>
 
-                                                            <p className="text-sm font-semibold text-gray-900">
-                                                                {p.name}
-                                                            </p>
+                                                            {/* TEXT */}
+                                                            <div>
 
-                                                            <p className="text-xs text-gray-500 mt-1">
-                                                                {p.desc}
-                                                            </p>
-                                                        </div>
-                                                    </Link>
+                                                                <p className="text-[15px] font-semibold text-gray-900">
+                                                                    {p.name}
+                                                                </p>
+
+                                                                <p className="text-xs text-gray-500 mt-1 leading-relaxed">
+                                                                    {p.desc}
+                                                                </p>
+                                                            </div>
+                                                        </Link>
+
+                                                    </SwiperSlide>
                                                 ))}
-                                            </div>
+                                            </Swiper>
                                         </div>
                                     </div>
                                 </div>
@@ -295,37 +446,41 @@ export default function Header() {
                         )}
                     </nav>
 
-                    {/* ================= RIGHT BTN ================= */}
-                    <div className="hidden lg:flex items-center">
+                    {/* ================= RIGHT SIDE ================= */}
+                    <div className="flex items-center gap-3">
 
+                        {/* Cart Button */}
                         <Button
-                            to="#"
-                            text="Contact"
+                            to="/cart"
+                            className="!p-3 rounded-full flex items-center justify-center"
+                            text={<ShoppingCart size={20} />}
                         />
-                    </div>
 
-                    {/* ================= MOBILE BTN ================= */}
-                    <button
-                        onClick={() => setOpen(true)}
-                        className="lg:hidden"
-                    >
-                        <Logs size={28} />
-                    </button>
+                        {/* Mobile Menu Button */}
+                        <button
+                            onClick={() => setOpen(true)}
+                            className="lg:hidden"
+                        >
+                            <Logs size={28} />
+                        </button>
+
+                    </div>
                 </div>
             </div>
 
             {/* ================= MOBILE SIDEBAR ================= */}
             <div
                 className={`
-                    fixed top-0 right-0 h-full w-[320px]
-                    bg-white z-110
-                    shadow-2xl
-                    transition-transform duration-300
-                    ${open
+        fixed top-0 right-0 h-full w-[320px]
+        bg-white z-110
+        shadow-2xl
+        transition-transform duration-300
+        overflow-y-auto
+        ${open
                         ? "translate-x-0"
                         : "translate-x-full"
                     }
-                `}
+    `}
             >
 
                 {/* TOP */}
@@ -369,7 +524,7 @@ export default function Header() {
 
                             {/* MOBILE PRODUCTS */}
                             {link.mega && (
-                                <div className="mt-4 pl-2 flex flex-col gap-4">
+                                <div className="mt-4 grid grid-cols-2 gap-3">
 
                                     {products.map((p, idx) => (
                                         <Link
@@ -377,31 +532,46 @@ export default function Header() {
                                             to={p.link}
                                             onClick={() => setOpen(false)}
                                             className="
-                                                flex items-center gap-3
-                                                rounded-xl
-                                            "
+                    group
+                    flex flex-col items-center
+                    text-center
+                    p-3
+                    rounded-2xl
+                    border border-gray-100
+                    bg-white
+                    hover:border-gray-300
+                    hover:shadow-md
+                    transition-all duration-300
+                "
                                         >
 
-                                            <img
-                                                src={p.img}
-                                                alt=""
-                                                className="
-                                                    w-12 h-12
-                                                    rounded-lg
-                                                    object-cover
-                                                "
-                                            />
+                                            {/* IMAGE */}
+                                            <div className="
+                    w-16 h-16
+                    rounded-xl
+                    bg-gray-50
+                    border border-gray-100
+                    flex items-center justify-center
+                    overflow-hidden
+                    mb-2
+                ">
 
-                                            <div>
-
-                                                <p className="text-sm font-medium">
-                                                    {p.name}
-                                                </p>
-
-                                                <p className="text-xs text-gray-500 mt-1">
-                                                    {p.desc}
-                                                </p>
+                                                <img
+                                                    src={p.img}
+                                                    alt={p.name}
+                                                    className="
+                            w-full h-full
+                            object-cover
+                            group-hover:scale-105
+                            transition duration-300
+                        "
+                                                />
                                             </div>
+
+                                            {/* NAME */}
+                                            <p className="text-[13px] font-medium text-gray-800 leading-tight">
+                                                {p.name}
+                                            </p>
                                         </Link>
                                     ))}
                                 </div>
@@ -409,18 +579,17 @@ export default function Header() {
                         </div>
                     ))}
 
-                    {/* BTN */}
-                    <div
+                    {/* <div
                         className="mt-6"
                         onClick={() => setOpen(false)}
                     >
 
                         <Button
-                            to="#"
-                            text="Contact"
+                            to="/cart"
+                            text="Cart"
                             className="w-full text-center"
                         />
-                    </div>
+                    </div> */}
                 </div>
             </div>
 

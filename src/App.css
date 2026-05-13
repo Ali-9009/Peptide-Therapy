@@ -14,3 +14,32 @@ body {
 .text {
     @apply text-sm md:text-base text-gray-600 leading-relaxed
 }
+
+
+
+/* HIDE SCROLLBAR */
+.scrollbar-hide::-webkit-scrollbar {
+    display: none;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+
+/* MEGA MENU SWIPER */
+
+.mega-swiper {
+    overflow: hidden;
+}
+
+.mega-swiper .swiper-slide {
+    height: calc((100% - 36px) / 3) !important;
+}
+
+/* REMOVE DEFAULT SWIPER ARROWS */
+.mega-swiper .swiper-button-next,
+.mega-swiper .swiper-button-prev {
+    display: none;
+}

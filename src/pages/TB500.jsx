@@ -1,4 +1,7 @@
 import { CheckCircle } from "lucide-react";
+import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
+import { products } from "../product/data";
 
 import Button from "../components/PrimaryBtn";
 import CTA from "../components/Cta";
@@ -37,9 +40,14 @@ const items2 = [
 ];
 
 export default function TB_500() {
+
+    const navigate = useNavigate();
+    const { addToCart } = useCart();
+    const product = products.tb500;
+
     return (
         <>
-            <section className="py-12 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-4">
@@ -55,7 +63,14 @@ export default function TB_500() {
                             <p className="text mt-2">
                                 TB500 is researched for its role in supporting recovery processes, tissue repair signaling, and overall physical resilience. Rather than forcing unnatural stimulation, the focus is on helping the body maintain efficient recovery, flexibility, and performance support through regenerative and recovery-oriented pathways.
                             </p>
-                            <Button text="Purchase TB500 Now" className="mt-4" />
+                            <Button
+                                text="Purchase TB500 Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">
@@ -71,7 +86,7 @@ export default function TB_500() {
                 </div>
             </section>
 
-            <section className="py-12 px-6">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <h2 className="heading text-center mb-10">
@@ -98,13 +113,20 @@ export default function TB_500() {
 
                     {/* BUTTON */}
                     <div className="mt-12 flex justify-center">
-                        <Button text="Purchase TB500 Now " />
+                        <Button
+                            text="Purchase TB500 Now"
+                            className="mt-4"
+                            onClick={() => {
+                                addToCart(product);
+                                navigate("/cart");
+                            }}
+                        />
                     </div>
 
                 </div>
             </section>
 
-            <section className="py-6 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4">
@@ -122,7 +144,7 @@ export default function TB_500() {
                                 Who May Be a Good Candidate for TB500?
                             </h1>
 
-                            <div className="py-2">
+                            <div className="my-4">
                                 {items.map((text, i) => (
                                     <div key={i} className="flex gap-3 space-y-4 items-start">
                                         <CheckCircle
@@ -136,7 +158,14 @@ export default function TB_500() {
                                 ))}
                             </div>
 
-                            <Button text="Purchase TB500 Now" className="mt-4" />
+                            <Button
+                                text="Purchase TB500 Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                     </div>
@@ -144,7 +173,7 @@ export default function TB_500() {
                 </div>
             </section>
 
-            <section className="py-12 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-4">
@@ -167,7 +196,14 @@ export default function TB_500() {
                                     </div>
                                 ))}
                             </div>
-                            <Button text="Purchase TB500 Now" className="mt-4" />
+                            <Button
+                                text="Purchase TB500 Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">

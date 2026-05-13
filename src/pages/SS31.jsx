@@ -1,4 +1,7 @@
 import { CheckCircle } from "lucide-react";
+import { useCart } from "../context/CartContext";
+import { useNavigate } from "react-router-dom";
+import { products } from "../product/data";
 
 import Button from "../components/PrimaryBtn";
 import CTA from "../components/Cta";
@@ -30,9 +33,14 @@ const items = [
 ];
 
 export default function SS_31() {
+
+    const navigate = useNavigate();
+    const { addToCart } = useCart();
+    const product = products.ss31;
+
     return (
         <>
-            <section className="py-12 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-center gap-4">
@@ -48,7 +56,14 @@ export default function SS_31() {
                             <p className="text mt-2">
                                 SS:31 is researched for its role in supporting mitochondrial function — the energy-producing systems inside your cells. Rather than overstimulating the body, the focus is on improving cellular efficiency, resilience, and recovery support through targeted mitochondrial protection and performance optimization.
                             </p>
-                            <Button text="Purchase SS:31 Now" className="mt-4" />
+                            <Button
+                                text="Purchase SS:31 Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center">
@@ -64,8 +79,8 @@ export default function SS_31() {
                 </div>
             </section>
 
-            <section className="px-4 py-12">
-                <div className="max-w-5xl mx-auto">
+            <section className="md:py-12 py-6 px-4">
+                <div className="max-w-6xl mx-auto">
 
                     {/* TITLE */}
                     <h2 className="heading text-center mb-10">
@@ -125,13 +140,20 @@ export default function SS_31() {
 
                     {/* CTA */}
                     <div className="flex justify-center mt-8">
-                        <Button text="Purchase SS:31 Now" className="mt-4" />
+                        <Button
+                            text="Purchase SS:31 Now"
+                            className="mt-4"
+                            onClick={() => {
+                                addToCart(product);
+                                navigate("/cart");
+                            }}
+                        />
                     </div>
 
                 </div>
             </section>
 
-            <section className="py-6 px-4">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <div className="grid grid-cols-1 lg:grid-cols-2 items-center justify-between gap-4">
@@ -163,7 +185,14 @@ export default function SS_31() {
                                 ))}
                             </div>
 
-                            <Button text="Purchase SS:31 Now" className="mt-4" />
+                            <Button
+                                text="Purchase SS:31 Now"
+                                className="mt-4"
+                                onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                            />
                         </div>
 
                     </div>
@@ -171,7 +200,7 @@ export default function SS_31() {
                 </div>
             </section>
 
-            <section className="py-12 px-6">
+            <section className="md:py-12 py-6 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     <h2 className="heading text-center mb-10">
@@ -198,7 +227,14 @@ export default function SS_31() {
 
                     {/* BUTTON */}
                     <div className="mt-12 flex justify-center">
-                        <Button text="Purchase SS:31 Now" />
+                        <Button
+                            text="Purchase SS:31 Now"
+                            className="mt-4"
+                            onClick={() => {
+                                addToCart(product);
+                                navigate("/cart");
+                            }}
+                        />
                     </div>
 
                 </div>
