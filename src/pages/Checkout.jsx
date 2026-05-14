@@ -4,22 +4,33 @@ import { useCart } from "../context/CartContext";
 import Button from "../components/PrimaryBtn";
 
 export default function Checkout() {
-    const { cartItems } = useCart();
+
 
     const [delivery, setDelivery] = useState("standard");
 
+    const {
+        cartItems,
+        removeFromCart,
+        updateQty
+    } = useCart();
+
+    const items = cartItems;
+
+    const [coupon, setCoupon] = useState("");
+    const [applied, setApplied] = useState(false);
+
     const subtotal = useMemo(
         () =>
-            cartItems.reduce(
-                (total, item) => total + item.price * item.qty,
+            items.reduce(
+                (sum, item) => sum + item.price * item.qty,
                 0
             ),
-        [cartItems]
+        [items]
     );
 
-    const shipping = delivery === "express" ? 14 : 5;
-    const tax = Math.round(subtotal * 0.08);
-    const total = subtotal + shipping + tax;
+    const discount = applied ? Math.round(subtotal * 0.12) : 0;
+    const shipping = subtotal > 120 ? 0 : 12;
+    const total = subtotal - discount + shipping;
 
     return (
         <div className="px-4 py-8 text-gray-900 sm:px-6 lg:px-8">
@@ -112,7 +123,7 @@ export default function Checkout() {
                         <div className="mt-6 space-y-3 border-t border-gray-200 pt-5 text-sm">
                             <PriceRow label="Subtotal" value={`$${subtotal}`} />
                             <PriceRow label="Shipping" value={`$${shipping}`} />
-                            <PriceRow label="Tax" value={`$${tax}`} />
+                            <PriceRow label="Discount" value={`-$${discount}`} muted={discount === 0} />
                             <div className="flex justify-between border-t border-gray-200 pt-4 text-base font-bold">
                                 <span>Total</span>
                                 <span>${total}</span>

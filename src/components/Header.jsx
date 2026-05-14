@@ -156,6 +156,12 @@ export default function Header() {
             link: "/bac-water",
             desc: "Skin & recovery support peptide",
         },
+        {
+            name: "BPC-157",
+            img: "assets/bpc-1.jpg",
+            link: "/bpc-157",
+            desc: "Skin & recovery support peptide",
+        },
     ];
 
     // ================= NAV LINKS =================
@@ -203,7 +209,7 @@ export default function Header() {
 
                         <a
                             href="tel:3052656226"
-                            className="flex items-center gap-2 hover:opacity-80 transition"
+                            className="flex items-center gap-2 text-xs hover:opacity-80 transition"
                         >
                             <Phone size={15} />
 
@@ -212,7 +218,7 @@ export default function Header() {
                             </span>
                         </a>
 
-                        <a href="mailto:info@gmail.com" className="flex items-center gap-2 hover:opacity-80 transition">
+                        <a href="mailto:info@gmail.com" className="flex text-xs items-center gap-2 hover:opacity-80 transition">
                             <Mail size={15} />
                             <span>
                                 info@gmail.com

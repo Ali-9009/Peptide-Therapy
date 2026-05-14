@@ -130,6 +130,12 @@ export default function Products() {
             link: "/bac-water",
             desc: "Skin & recovery support peptide",
         },
+        {
+            name: "BPC-157",
+            img: "assets/bpc-1.jpg",
+            link: "/bpc-157",
+            desc: "Skin & recovery support peptide",
+        },
     ];
 
     return (

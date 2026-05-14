@@ -32,6 +32,9 @@ import Bac from "./pages/Bac";
 import Cart from "./pages/Cart";
 import Checkout from "./pages/Checkout";
 import Contact from "./pages/Contact";
+import Bpc_157 from "./pages/Bpc_157";
+import PrivacyPolicy from "./pages/Policies/PrivacyPolicy";
+import TermConditions from "./pages/Policies/TermConditions";
 
 function AnimatedRoutes() {
   const location = useLocation();
@@ -65,6 +68,9 @@ function AnimatedRoutes() {
           <Route path="/cart" element={<Cart />} />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/bpc-157" element={<Bpc_157 />} />
+          <Route path="/privacy-Policy" element={<PrivacyPolicy />} />
+          <Route path="/term&condition" element={<TermConditions />} />
         </Route>
       </Routes>
     </AnimatePresence>

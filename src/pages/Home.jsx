@@ -1,13 +1,9 @@
 import { CheckCircle } from "lucide-react";
-import { useCart } from "../context/CartContext";
-import { useNavigate } from "react-router-dom";
-import { products } from "../product/data";
 
 import Button from "../components/PrimaryBtn";
 import CTA from "../components/Cta";
 import ImageLoader from "../components/ImageLoader";
 import Products from "../components/Products";
-
 
 const benefits = [
     {
@@ -51,48 +47,103 @@ const items = [
 ];
 export default function Home() {
 
-    const navigate = useNavigate();
-    const { addToCart } = useCart();
-    const product = products.bpc;
-
     return (
         <>
-            <section className="relative min-h-175 flex items-center justify-center text-center text-white overflow-hidden">
+            <section className="relative overflow-hidden bg-white">
+                {/* Background Glow */}
+                <div className="absolute inset-0 -z-10">
+                    <div className="absolute left-1/2 top-0 h-96 w-96 -translate-x-1/2 rounded-full bg-cyan-200/40 blur-3xl" />
+                    <div className="absolute right-0 top-32 h-72 w-72 rounded-full bg-blue-200/40 blur-3xl" />
+                    <div className="absolute bottom-0 left-10 h-72 w-72 rounded-full bg-teal-200/30 blur-3xl" />
+                </div>
 
-                <img
-                    src="/assets/hero.jpg"
-                    alt="Hero"
-                    className="absolute inset-0 w-full h-full object-cover"
-                />
+                <div className="mx-auto grid max-w-7xl items-center gap-12 px-6 py-12 md:py-20 lg:grid-cols-2">
+                    {/* Left Content */}
+                    <div>
+                        <span className="mb-5 inline-flex items-center gap-2 rounded-full border border-cyan-200 bg-cyan-50 px-4 py-2 text-sm font-semibold text-cyan-700 shadow-sm">
+                            <span className="h-2 w-2 rounded-full bg-cyan-500" />
+                            Advanced Peptide Research Collection
+                        </span>
 
-                {/* Content */}
-                <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+                        <h1 className="max-w-3xl text-4xl font-extrabold tracking-tight text-gray-950 sm:text-5xl lg:text-6xl">
+                            Peptides For
+                            <span className="mt-2 block bg-linear-to-r from-cyan-500 via-blue-600 to-teal-500 bg-clip-text text-transparent">
+                                Recovery & Performance.
+                            </span>
+                        </h1>
 
-                    <h1 className="text-5xl md:text-7xl font-bold tracking-tight">
-                        BPC-157
-                    </h1>
-                    <p className="text-xl md:text-3xl mt-3 font-medium">
-                        Peptide Therapy in Miami
-                    </p>
-                    <p className="text-sm md:text-base text-gray-200 mt-6 leading-relaxed">
-                        BPC-157 is a synthetic peptide originally identified in gastric juice research and discussed for its potential role in tissue repair, digestive lining support, and recovery-related signaling. Evidence is still emerging, so it's best viewed as investigational and used responsibly with safety in mind.
-                    </p>
-                    <div className="mt-6 flex justify-center">
-                        <Button
-                            text="Purchase BPC-157 Now"
-                            onClick={() => {
-                                addToCart(product);
-                                navigate("/cart");
-                            }}
-                        />
+                        <p className="mt-6 max-w-2xl text-lg leading-8 text-gray-600">
+                            Explore a powerful collection of research peptides including
+                            <span className="font-semibold text-gray-900"> BPC-157</span>,
+                            <span className="font-semibold text-gray-900"> TB-500</span>,
+                            <span className="font-semibold text-gray-900"> Semaglutide</span>,
+                            <span className="font-semibold text-gray-900"> Tirzepatide</span>, and more
+                            crafted for advanced research, recovery support, metabolism,
+                            longevity, and performance optimization.
+                        </p>
+
+                        <div className="mt-8 flex flex-wrap items-center gap-4">
+                            <Button text="Contact Us" />
+
+                            <a
+                                href="#products"
+                                className="rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-800 shadow-sm transition hover:border-cyan-300 hover:text-cyan-700 hover:shadow-md"
+                            >
+                                View Collection
+                            </a>
+                        </div>
+
+                        {/* Trust Row */}
+                        <div className="mt-10 grid max-w-xl grid-cols-3 gap-4">
+                            <div className="rounded-2xl border border-gray-100 bg-white/80 p-4 shadow-sm">
+                                <p className="text-2xl font-bold text-gray-950">99%</p>
+                                <p className="text-sm text-gray-500">Purity Focused</p>
+                            </div>
+
+                            <div className="rounded-2xl border border-gray-100 bg-white/80 p-4 shadow-sm">
+                                <p className="text-2xl font-bold text-gray-950">Lab</p>
+                                <p className="text-sm text-gray-500">Research Grade</p>
+                            </div>
+
+                            <div className="rounded-2xl border border-gray-100 bg-white/80 p-4 shadow-sm">
+                                <p className="text-2xl font-bold text-gray-950">Fast</p>
+                                <p className="text-sm text-gray-500">Support</p>
+                            </div>
+                        </div>
                     </div>
 
+                    {/* Right Product Showcase */}
+                    <div className="relative">
+                        <div className="absolute inset-0 rounded-full bg-cyan-200/40 blur-3xl" />
+
+                        <div className="relative mx-auto max-w-md rounded-[2rem] border border-gray-100 bg-white/70 p-6 shadow-2xl shadow-cyan-900/10 backdrop-blur">
+                            <div className="absolute -right-6 -top-6 rounded-2xl bg-white px-4 py-3 shadow-xl">
+                                <p className="text-xs font-medium text-gray-500">Featured</p>
+                                <p className="text-sm font-bold text-gray-900">BPC-157</p>
+                            </div>
+
+                            <img
+                                src="assets/bpc-2.png"
+                                alt="Premium peptide product"
+                                className="mx-auto w-full drop-shadow-2xl"
+                            />
+
+                            <div className="mt-6 rounded-2xl bg-gray-50 p-4">
+                                <p className="text-sm font-semibold text-gray-900">
+                                    Premium Research Peptides
+                                </p>
+                                <p className="mt-1 text-sm text-gray-500">
+                                    Designed for advanced research, wellness, and performance studies.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
             <Products />
 
-            <section className="py-12 px-6">
+            <section className="hidden py-12 px-6">
                 <div className="max-w-6xl mx-auto">
 
                     {/* TOP SECTION */}
@@ -154,7 +205,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="md:py-12 px-6">
+            <section className="hidden md:py-12 px-6">
                 <div className="max-w-6xl mx-auto grid md:grid-cols-2 gap-10 items-center">
 
                     {/* LEFT SIDE */}
@@ -195,7 +246,7 @@ export default function Home() {
                 </div>
             </section>
 
-            <section className="py-12 px-6">
+            <section className="hidden py-12 px-6">
                 <div className="max-w-6xl mx-auto border border-gray-300 rounded-2xl shadow-sm p-8 md:p-12">
 
                     <h2 className="heading text-center mb-4">

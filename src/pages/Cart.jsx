@@ -1,15 +1,6 @@
 import { useMemo, useState } from "react";
 import { motion } from "framer-motion";
-import {
-    Minus,
-    Plus,
-    Trash2,
-    ShieldCheck,
-    Truck,
-    Tag,
-    ArrowRight,
-    ShoppingBag
-} from "lucide-react";
+import { Minus, Plus, Trash2, ShieldCheck, Truck, Tag, ArrowRight, ShoppingBag } from "lucide-react";
 import Button from "../components/PrimaryBtn";
 import { useCart } from "../context/CartContext";
 
