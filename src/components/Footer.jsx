@@ -6,6 +6,8 @@ export default function Footer() {
         { name: "Home", path: "/" },
         { name: "Contact Us", path: "/contact" },
         { name: "Cart", path: "/cart" },
+        { name: "Questionnaire", path: "/questionnaire" },
+        { name: "My Account", path: "/account" },
     ];
 
     return (
@@ -109,8 +111,11 @@ export default function Footer() {
                         <Link to="/privacy-Policy" className="hover:text-black transition">
                             Privacy Policy
                         </Link>
-                        <Link to="/term&condition" className="hover:text-black transition">
-                            Terms & Conditions
+                        <Link to="/termServices" className="hover:text-black transition">
+                            Terms of Service
+                        </Link>
+                        <Link to="/disclaimer" className="hover:text-black transition">
+                            Disclaimer
                         </Link>
                     </div>
                 </div>

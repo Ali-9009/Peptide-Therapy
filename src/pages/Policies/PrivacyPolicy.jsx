@@ -33,144 +33,134 @@ export default function PrivacyPolicy() {
                 {/* Section */}
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold">
-                        1. Information We Collect
+                        1. Introduction
                     </h2>
 
                     <div>
-                        <h3 className="font-semibold text-lg mb-2">
-                            Personal Information
+                        <h3 className="leading-8 text-gray-700">
+                            Prolongevity Peptides ("we," "our," or "us") is committed to protecting your privacy. This Privacy Policy explains how we collect, use, and safeguard your information when you visit prolongevity.com and make purchases through our platform.
                         </h3>
-
-                        <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                            <li>Full name</li>
-                            <li>Email address</li>
-                            <li>Phone number</li>
-                            <li>Shipping & billing address</li>
-                            <li>Payment-related information</li>
-                        </ul>
-                    </div>
-
-                    <div>
-                        <h3 className="font-semibold text-lg mb-2">
-                            Non-Personal Information
-                        </h3>
-
-                        <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                            <li>Browser type</li>
-                            <li>Device information</li>
-                            <li>IP address</li>
-                            <li>Pages visited</li>
-                            <li>Website usage analytics</li>
-                        </ul>
                     </div>
                 </div>
 
                 {/* Section */}
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold">
-                        2. How We Use Your Information
+                        2. Information We Collect
                     </h2>
 
-                    <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                        <li>Process orders and payments</li>
-                        <li>Provide customer support</li>
-                        <li>Improve website performance</li>
-                        <li>Send updates and notifications</li>
-                        <li>Prevent fraud and maintain security</li>
-                    </ul>
+                    <h3 className="leading-8 text-gray-700">
+                        We collect information you provide directly, including: full name, email address, phone number, shipping address, payment confirmation screenshots or transaction IDs, and any communications you send us. We also collect standard technical data such as IP address, browser type, and pages visited through cookies and analytics tools.
+                    </h3>
                 </div>
 
                 {/* Section */}
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold">
-                        3. Cookies & Tracking Technologies
+                        3. How We Use Your Information
                     </h2>
 
                     <p className="leading-8 text-gray-700">
-                        Our website may use cookies and similar technologies to
-                        improve functionality, analyze traffic, and personalize
-                        your experience. You can disable cookies through your
-                        browser settings at any time.
+                        We use your information to: process and fulfill your orders, communicate order status and updates, verify manual payments (Crypto, Zelle, CashApp, Wire), respond to customer service inquiries, improve our website and services, and comply with legal obligations.
                     </p>
                 </div>
 
                 {/* Section */}
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold">
-                        4. Sharing Your Information
+                        4. Payment Information
                     </h2>
 
                     <p className="leading-8 text-gray-700">
-                        We do not sell or rent your personal information. We may
-                        share information with trusted third-party services for
-                        payment processing, shipping, analytics, or legal
-                        compliance.
+                        Prolongevity Peptides uses a manual payment system. We do not store credit card numbers or banking credentials on our servers. Payment proof (screenshots or transaction IDs) submitted through our checkout are used solely for order verification and are not shared with third parties.
                     </p>
                 </div>
 
                 {/* Section */}
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold">
-                        5. Data Security
+                        5. Sharing of Information
                     </h2>
 
                     <p className="leading-8 text-gray-700">
-                        We implement appropriate security measures to protect
-                        your information from unauthorized access, misuse, or
-                        disclosure.
+                        We do not sell, trade, or rent your personal information to third parties. We may share information with trusted service providers who assist in operating our website and fulfilling orders, subject to confidentiality agreements.
                     </p>
                 </div>
 
                 {/* Section */}
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold">
-                        6. Third-Party Links
+                        6. Cookies
                     </h2>
 
                     <p className="leading-8 text-gray-700">
-                        Our website may contain links to third-party websites.
-                        We are not responsible for their privacy practices or
-                        content.
+                        Our website uses cookies to enhance your browsing experience, analyze traffic, and remember your preferences. You may disable cookies through your browser settings, though this may affect site functionality
                     </p>
                 </div>
 
                 {/* Section */}
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold">
-                        7. Your Rights
-                    </h2>
-
-                    <ul className="list-disc pl-6 space-y-2 text-gray-700">
-                        <li>Access your personal data</li>
-                        <li>Request corrections</li>
-                        <li>Request deletion of your information</li>
-                        <li>Opt out of marketing communications</li>
-                    </ul>
-                </div>
-
-                {/* Section */}
-                <div className="space-y-4">
-                    <h2 className="text-2xl font-bold">
-                        8. Children's Privacy
+                        7. Data Retention
                     </h2>
 
                     <p className="leading-8 text-gray-700">
-                        Our website is not intended for individuals under the
-                        age of 13, and we do not knowingly collect information
-                        from children.
+                        We retain your personal information for as long as necessary to fulfill orders, comply with legal requirements, and resolve disputes. You may request deletion of your data by contacting us at info@prolongevity.com.
                     </p>
                 </div>
 
                 {/* Section */}
                 <div className="space-y-4">
                     <h2 className="text-2xl font-bold">
-                        9. Changes to This Privacy Policy
+                        8. Your Rights
                     </h2>
 
                     <p className="leading-8 text-gray-700">
-                        We may update this Privacy Policy from time to time.
-                        Changes will be posted on this page with an updated
-                        revision date.
+                        You have the right to access, correct, or request deletion of your personal data. To exercise these rights, contact us at info@prolongevity.com. We will respond within 30 business days.
+                    </p>
+                </div>
+
+                {/* Section */}
+                <div className="space-y-4">
+                    <h2 className="text-2xl font-bold">
+                        9. Security
+                    </h2>
+
+                    <p className="leading-8 text-gray-700">
+                        We implement reasonable security measures to protect your information. However, no method of transmission over the internet is 100% secure. We cannot guarantee absolute security but are committed to protecting your data.
+                    </p>
+                </div>
+
+                {/* Section */}
+                <div className="space-y-4">
+                    <h2 className="text-2xl font-bold">
+                        10. Research Use Disclaimer
+                    </h2>
+
+                    <p className="leading-8 text-gray-700">
+                        All products sold by Prolongevity Peptides are for laboratory research purposes only and are not intended for human consumption. By purchasing, you confirm you are a qualified researcher or institution aged 21 or older.
+                    </p>
+                </div>
+
+                {/* Section */}
+                <div className="space-y-4">
+                    <h2 className="text-2xl font-bold">
+                        11. Changes to This Policy
+                    </h2>
+
+                    <p className="leading-8 text-gray-700">
+                        We may update this Privacy Policy periodically. Changes will be posted on this page with an updated date. Continued use of the site after changes constitutes acceptance of the new policy.
+                    </p>
+                </div>
+
+                {/* Section */}
+                <div className="space-y-4">
+                    <h2 className="text-2xl font-bold">
+                        12. Contact Us
+                    </h2>
+
+                    <p className="leading-8 text-gray-700">
+                        For privacy-related questions: Email: info@prolongevity.com · Phone: (305) 000-0000 — Available Monday–Friday 9am–6pm EST · Location: United States.
                     </p>
                 </div>
             </div>

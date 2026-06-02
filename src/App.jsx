@@ -34,14 +34,29 @@ import Checkout from "./pages/Checkout";
 import Contact from "./pages/Contact";
 import Bpc_157 from "./pages/Bpc_157";
 import PrivacyPolicy from "./pages/Policies/PrivacyPolicy";
-import TermConditions from "./pages/Policies/TermConditions";
+
+import Login from "./pages/auth/Login";
+import ForgotPassword from "./pages/auth/ForgotPassword";
+import SetNew from "./pages/auth/SetNew";
+import Signup from "./pages/auth/Signup";
+import VerifyCode from "./pages/auth/VerifyCode";
+import TermsService from "./pages/Policies/TermConditions";
+import Disclaimer from "./pages/Policies/Disclaimer";
+import AuthLayout from "./Layout/AuthLayout";
+import Questionnaire from "./pages/questionnaire/Questionnaire";
+import LanguageModal from "./pages/LanguageModal";
+import Account from "./pages/Account";
+
 
 function AnimatedRoutes() {
   const location = useLocation();
 
   return (
     <AnimatePresence mode="wait">
+      <LanguageModal />
       <Routes location={location} key={location.pathname}>
+
+        {/* Website Pages */}
         <Route element={<Layout />}>
           <Route path="/" element={<Home />} />
           <Route path="/slu-pp-322" element={<SLU_PP />} />
@@ -70,8 +85,22 @@ function AnimatedRoutes() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/bpc-157" element={<Bpc_157 />} />
           <Route path="/privacy-Policy" element={<PrivacyPolicy />} />
-          <Route path="/term&condition" element={<TermConditions />} />
+          <Route path="/termServices" element={<TermsService />} />
+          <Route path="/disclaimer" element={<Disclaimer />} />
+          <Route path="/questionnaire" element={<Questionnaire />} />
+          <Route path="/account" element={<Account />} />
         </Route>
+
+        {/* Auth Pages */}
+        <Route element={<AuthLayout />}>
+          <Route path="/login" element={<Login />} />
+          <Route path="/forgotPassword" element={<ForgotPassword />} />
+          <Route path="/setNew" element={<SetNew />} />
+          <Route path="/signUp" element={<Signup />} />
+          <Route path="/verifyCode" element={<VerifyCode />} />
+          {/* <Route path="/front" element={<Front />} /> */}
+        </Route>
+
       </Routes>
     </AnimatePresence>
   );

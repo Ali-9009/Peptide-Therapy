@@ -9,6 +9,7 @@ import {
     Logs,
     ShoppingCart
 } from "lucide-react";
+import { LogIn } from "lucide-react";
 
 import { Link, NavLink } from "react-router-dom";
 
@@ -453,7 +454,16 @@ export default function Header() {
                     </nav>
 
                     {/* ================= RIGHT SIDE ================= */}
+                  
+
                     <div className="flex items-center gap-3">
+
+                        {/* Login Button */}
+                        <Button
+                            to="/login"
+                            className="!p-3 rounded-full flex items-center justify-center"
+                            text={<LogIn size={20} />}
+                        />
 
                         {/* Cart Button */}
                         <Button
