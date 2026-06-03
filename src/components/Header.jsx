@@ -15,6 +15,7 @@ import { Link, NavLink } from "react-router-dom";
 
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Grid } from "swiper/modules";
+import { products } from "../product/data";
 
 import "swiper/css";
 import "swiper/css/navigation";
@@ -26,144 +27,9 @@ export default function Header() {
     const [open, setOpen] = useState(false);
     const [sticky, setSticky] = useState(false);
     const [megaOpen, setMegaOpen] = useState(false);
+    const [mobileProductsOpen, setMobileProductsOpen] = useState(false);
 
     const langRef = useRef(null);
-
-    // ================= PRODUCTS =================
-    const products = [
-        {
-            name: "GHK-Cu",
-            img: "assets/ghk-1.png",
-            link: "/ghk-cu",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "SS-31",
-            img: "assets/ss-1.png",
-            link: "/ss-31",
-            desc: "Mitochondrial support peptide",
-        },
-        {
-            name: "TB-500",
-            img: "assets/tb-1.png",
-            link: "/tb-500",
-            desc: "Recovery & repair peptide",
-        },
-        {
-            name: "Tesamorelin",
-            img: "assets/tes-1.png",
-            link: "/tesamorelin",
-            desc: "Metabolism support peptide",
-        },
-        {
-            name: "SLU-PP-322",
-            img: "assets/slu-1.png",
-            link: "/slu-pp-322",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "Ipamorelin",
-            img: "assets/ipa-1.png",
-            link: "/ipamorelin",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "Thymulin",
-            img: "assets/thy-1.png",
-            link: "/thymulin",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "Kisspetin",
-            img: "assets/kis-1.png",
-            link: "/kisspetin",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "Retatrutide",
-            img: "assets/ret-1.png",
-            link: "/retatrutide",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "Semaglutide",
-            img: "assets/sem-1.png",
-            link: "/semaglutide",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "Tirzepatide",
-            img: "assets/tir-1.png",
-            link: "/tirzepatide",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "5-AMINO-1MQ",
-            img: "assets/ami-1.png",
-            link: "/5-amino-1mq",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "Melanotan",
-            img: "assets/mel-1.png",
-            link: "/melanotan",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "MOTS-c",
-            img: "assets/mot-1.png",
-            link: "/mots-c",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "PT141",
-            img: "assets/pt-1.png",
-            link: "/pt-141",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "KPV",
-            img: "assets/kp-1.png",
-            link: "/kpv",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "Nad+",
-            img: "assets/nad-1.png",
-            link: "/nad+",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "CIC-1295",
-            img: "assets/cic-1.png",
-            link: "/cic-1295",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "Epithalon",
-            img: "assets/epi-1.png",
-            link: "/epithalon",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "AOD-9604",
-            img: "assets/aod-1.png",
-            link: "/aod-9604",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "Bac.water",
-            img: "assets/bac-1.png",
-            link: "/bac-water",
-            desc: "Skin & recovery support peptide",
-        },
-        {
-            name: "BPC-157",
-            img: "assets/bpc-1.jpg",
-            link: "/bpc-157",
-            desc: "Skin & recovery support peptide",
-        },
-    ];
 
     // ================= NAV LINKS =================
     const links = [
@@ -197,6 +63,14 @@ export default function Header() {
                 handleScroll
             );
     }, []);
+
+    useEffect(() => {
+        document.body.classList.toggle("overflow-hidden", open);
+
+        return () => {
+            document.body.classList.remove("overflow-hidden");
+        };
+    }, [open]);
 
     return (
         <header className="w-full relative z-50">
@@ -382,10 +256,10 @@ export default function Header() {
                                             >
 
                                                 {products.map((p, idx) => (
-                                                    <SwiperSlide key={idx}>
+                                                    <SwiperSlide key={p.id}>
 
                                                         <Link
-                                                            to={p.link}
+                                                            to={`/${p.slug}`}
                                                             className="
                             group
                             flex items-center gap-4
@@ -402,7 +276,7 @@ export default function Header() {
                                                             <div className="overflow-hidden rounded-2xl shrink-0 bg-gray-100 p-2">
 
                                                                 <img
-                                                                    src={p.img}
+                                                                    src={p.image}
                                                                     alt={p.name}
                                                                     className="
                                     w-16 h-16
@@ -461,14 +335,14 @@ export default function Header() {
                         {/* Login Button */}
                         <Button
                             to="/login"
-                            className="!p-3 rounded-full flex items-center justify-center"
+                            className="p-3! rounded-full flex items-center justify-center"
                             text={<LogIn size={20} />}
                         />
 
                         {/* Cart Button */}
                         <Button
                             to="/cart"
-                            className="!p-3 rounded-full flex items-center justify-center"
+                            className="p-3! rounded-full flex items-center justify-center"
                             text={<ShoppingCart size={20} />}
                         />
 
@@ -521,76 +395,66 @@ export default function Header() {
                             key={i}
                             className="border-b border-gray-100 py-4"
                         >
+                            {link.mega ? (
+                                <>
+                                    <button
+                                        onClick={() =>
+                                            setMobileProductsOpen(!mobileProductsOpen)
+                                        }
+                                        className="w-full flex items-center justify-between text-gray-800 font-medium"
+                                    >
+                                        {link.name}
 
-                            <Link
-                                to={link.path}
-                                onClick={() => setOpen(false)}
-                                className="
-                                    flex items-center justify-between
-                                    text-gray-800 font-medium
-                                "
-                            >
+                                        <ChevronDown
+                                            size={16}
+                                            className={`transition-transform duration-300 ${mobileProductsOpen ? "rotate-180" : ""
+                                                }`}
+                                        />
+                                    </button>
 
-                                {link.name}
-
-                                {link.mega && (
-                                    <ChevronDown size={16} />
-                                )}
-                            </Link>
-
-                            {/* MOBILE PRODUCTS */}
-                            {link.mega && (
-                                <div className="mt-4 grid grid-cols-2 gap-3">
-
-                                    {products.map((p, idx) => (
-                                        <Link
-                                            key={idx}
-                                            to={p.link}
-                                            onClick={() => setOpen(false)}
-                                            className="
-                    group
-                    flex flex-col items-center
-                    text-center
-                    p-3
-                    rounded-2xl
-                    border border-gray-100
-                    bg-white
-                    hover:border-gray-300
-                    hover:shadow-md
-                    transition-all duration-300
-                "
-                                        >
-
-                                            {/* IMAGE */}
-                                            <div className="
-                    w-16 h-16
-                    rounded-xl
-                    bg-gray-50
-                    border border-gray-100
-                    flex items-center justify-center
-                    overflow-hidden
-                    mb-2
-                ">
-
-                                                <img
-                                                    src={p.img}
-                                                    alt={p.name}
+                                    {mobileProductsOpen && (
+                                        <div className="mt-4 grid grid-cols-2 gap-3">
+                                            {products.map((p, idx) => (
+                                                <Link
+                                                    key={p.id}
+                                                    to={`/${p.slug}`}
+                                                    onClick={() => setOpen(false)}
                                                     className="
-                            w-full h-full
-                            object-cover
-                            group-hover:scale-105
-                            transition duration-300
-                        "
-                                                />
-                                            </div>
+                                    group
+                                    flex flex-col items-center
+                                    text-center
+                                    p-3
+                                    rounded-2xl
+                                    border border-gray-100
+                                    bg-white
+                                    hover:border-gray-300
+                                    transition
+                                "
+                                                >
+                                                    <div className="w-16 h-16 rounded-xl bg-gray-50 overflow-hidden mb-2">
+                                                        <img
+                                                            src={p.image}
+                                                            alt={p.name}
+                                                            className="w-full h-full object-cover"
+                                                        />
+                                                    </div>
 
-                                            {/* NAME */}
-                                            <p className="text-[13px] font-medium text-gray-800 leading-tight">
-                                                {p.name}
-                                            </p>
-                                        </Link>
-                                    ))}
-                                </div>
+                                                    <p className="text-[13px] font-medium">
+                                                        {p.name}
+                                                    </p>
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    )}
+                                </>
+                            ) : (
+                                <Link
+                                    to={link.path}
+                                    onClick={() => setOpen(false)}
+                                    className="flex items-center justify-between text-gray-800 font-medium"
+                                >
+                                    {link.name}
+                                </Link>
                             )}
                         </div>
                     ))}
@@ -612,7 +476,7 @@ export default function Header() {
             {/* ================= OVERLAY ================= */}
             {open && (
                 <div
-                    className="fixed inset-0 bg-black/40 z-[90]"
+                    className="fixed inset-0 bg-black/40 z-90"
                     onClick={() => setOpen(false)}
                 />
             )}

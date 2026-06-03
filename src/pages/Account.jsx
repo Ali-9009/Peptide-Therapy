@@ -11,8 +11,24 @@ import {
     Box,
     ChevronRight,
 } from "lucide-react";
+import { useState } from "react";
 
 export default function Account() {
+
+    const [editing, setEditing] = useState(false);
+
+    const [profile, setProfile] = useState({
+        name: "Jack",
+        email: "br6332160@gmail.com",
+        phone: "992342341123",
+        company: "unknown",
+    });
+
+    const handleSave = () => {
+        console.log(profile);
+        setEditing(false);
+    };
+    
     const orders = [
         {
             id: "ORD-2026-0045",
@@ -92,8 +108,15 @@ export default function Account() {
                                 </p>
                             </div>
 
-                            <button className="flex items-center gap-1 text-sm text-orange-500">
-                                Edit
+                            <button
+                                onClick={
+                                    editing
+                                        ? handleSave
+                                        : () => setEditing(true)
+                                }
+                                className="flex items-center gap-1 text-sm text-orange-500"
+                            >
+                                {editing ? "Save" : "Edit"}
                                 <ChevronRight size={14} />
                             </button>
                         </div>
@@ -103,7 +126,7 @@ export default function Account() {
                                 <div className="flex gap-3">
                                     <User
                                         size={16}
-                                        className="text-gray-400 mt-1"
+                                        className="text-gray-400"
                                     />
 
                                     <div>
@@ -111,16 +134,24 @@ export default function Account() {
                                             Name
                                         </p>
 
-                                        <p className="text-sm font-medium text-gray-900">
-                                            Jack
-                                        </p>
+                                        <input
+                                            value={profile.name}
+                                            disabled={!editing}
+                                            onChange={(e) =>
+                                                setProfile({
+                                                    ...profile,
+                                                    name: e.target.value,
+                                                })
+                                            }
+                                            className="w-full border border-gray-300 rounded-md px-3 py-2 disabled:bg-gray-50 disabled:border-gray-200 outline-none mt-2"
+                                        />
                                     </div>
                                 </div>
 
                                 <div className="flex gap-3">
                                     <Phone
                                         size={16}
-                                        className="text-gray-400 mt-1"
+                                        className="text-gray-400"
                                     />
 
                                     <div>
@@ -128,9 +159,17 @@ export default function Account() {
                                             Phone
                                         </p>
 
-                                        <p className="text-sm font-medium text-gray-900">
-                                            992342341123
-                                        </p>
+                                        <input
+                                            value={profile.phone}
+                                            disabled={!editing}
+                                            onChange={(e) =>
+                                                setProfile({
+                                                    ...profile,
+                                                    phone: e.target.value,
+                                                })
+                                            }
+                                            className="w-full border border-gray-300 rounded-md px-3 py-2 disabled:bg-gray-50 disabled:border-gray-200 outline-none mt-2"
+                                        />
                                     </div>
                                 </div>
                             </div>
@@ -139,7 +178,7 @@ export default function Account() {
                                 <div className="flex gap-3">
                                     <Mail
                                         size={16}
-                                        className="text-gray-400 mt-1"
+                                        className="text-gray-400"
                                     />
 
                                     <div>
@@ -147,16 +186,24 @@ export default function Account() {
                                             Email
                                         </p>
 
-                                        <p className="text-sm font-medium text-gray-900">
-                                            br6332160@gmail.com
-                                        </p>
+                                        <input
+                                            value={profile.email}
+                                            disabled={!editing}
+                                            onChange={(e) =>
+                                                setProfile({
+                                                    ...profile,
+                                                    email: e.target.value,
+                                                })
+                                            }
+                                            className="w-full border border-gray-300 rounded-md px-3 py-2 disabled:bg-gray-50 disabled:border-gray-200 outline-none mt-2"
+                                        />
                                     </div>
                                 </div>
 
                                 <div className="flex gap-3">
                                     <Building2
                                         size={16}
-                                        className="text-gray-400 mt-1"
+                                        className="text-gray-400"
                                     />
 
                                     <div>
@@ -164,9 +211,17 @@ export default function Account() {
                                             Company
                                         </p>
 
-                                        <p className="text-sm font-medium text-gray-900">
-                                            unknown
-                                        </p>
+                                        <input
+                                            value={profile.company}
+                                            disabled={!editing}
+                                            onChange={(e) =>
+                                                setProfile({
+                                                    ...profile,
+                                                    company: e.target.value,
+                                                })
+                                            }
+                                            className="w-full border border-gray-300 rounded-md px-3 py-2 disabled:bg-gray-50 disabled:border-gray-200 outline-none mt-2"
+                                        />
                                     </div>
                                 </div>
                             </div>

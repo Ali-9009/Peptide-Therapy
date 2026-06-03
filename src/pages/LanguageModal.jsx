@@ -192,7 +192,7 @@ export default function LanguageModal() {
 
                         <button
                             onClick={handleGetCode}
-                            className="w-full bg-(--primary-color) hover:opacity-90 text-black font-bold py-4 rounded-full transition"
+                            className="w-full bg-(--primary-color) hover:opacity-90 text-white font-semibold py-4 rounded-full transition"
                         >
                             Get My Code
                         </button>

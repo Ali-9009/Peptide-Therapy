@@ -8,6 +8,13 @@ import CTA from "../components/Cta";
 import FAQ from "../components/Faq";
 import ImageLoader from "../components/ImageLoader";
 
+import {
+    ShieldCheck,
+    Truck,
+    RotateCcw,
+    Lock,
+} from "lucide-react";
+
 const benefits = [
     {
         title: "Ideal For:",
@@ -43,7 +50,10 @@ export default function Bac() {
 
     const navigate = useNavigate();
     const { addToCart } = useCart();
-    const product = products.bac;
+    // const product = products.bac;
+    const product = products.find(
+        p => p.slug === "bac-water"
+    );
 
     return (
         <>
@@ -73,12 +83,52 @@ export default function Bac() {
                             />
                         </div>
 
-                        <div className="order-1 lg:order-2 flex justify-center">
-                            <ImageLoader
-                                src="assets/bac-1.png"
-                                alt="cover image"
-                                className="w-full h-full object-cover rounded-xl"
-                            />
+                        <div className="order-1 lg:order-2 flex justify-center w-full">
+                            <div className="bg-white rounded-2xl shadow-lg p-4 border border-gray-300">
+                                {/* Product Image */}
+                                <div className="overflow-hidden rounded-xl mb-4">
+                                    <ImageLoader
+                                        src={product.image}
+                                        alt={product.name}
+                                        className="w-90 h-auto"
+                                    />
+                                </div>
+
+                                {/* Price Section */}
+                                <div className="flex items-center justify-between mb-5 gap-4">
+                                    <div>
+                                        <p className="text-2xl font-bold text-slate-900">
+                                            {product.name}
+                                        </p>
+                                    </div>
+
+                                    <div className="text-right shrink-0">
+                                        <div className="flex items-end justify-end gap-1">
+                                            <span className="text-xl font-bold text-slate-900">
+                                                ${product.price}
+                                            </span>
+                                            <span className="text-sm text-slate-500 mb-0.5">
+                                                USD
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* CTA */}
+                                <button onClick={() => {
+                                    addToCart(product);
+                                    navigate("/cart");
+                                }}
+                                    className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-3 font-semibold flex items-center justify-center gap-2 transition">
+                                    <Lock size={18} />
+                                    Add To Cart
+                                </button>
+
+                                <div className="flex items-center justify-center gap-2 mt-3 text-xs text-slate-500">
+                                    <ShieldCheck size={14} />
+                                    <span>100% Secure Checkout</span>
+                                </div>
+                            </div>
                         </div>
 
                     </div>

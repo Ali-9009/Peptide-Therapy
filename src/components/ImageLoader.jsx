@@ -22,7 +22,7 @@ export default function ImageLoader({
                 alt={alt}
                 onLoad={() => setLoaded(true)}
                 className={`
-          w-full h-full object-cover
+           object-cover
           ${border ? "rounded-xl" : ""}
           ${className}
         `}

@@ -13,6 +13,7 @@ export default function AuthLayout() {
             transition={{ duration: 0.1 }}
         >
             <Outlet />
+
         </motion.div>
     );
 }

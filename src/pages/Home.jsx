@@ -107,7 +107,7 @@ export default function Home() {
 
                             <div className="rounded-2xl border border-gray-100 bg-white/80 p-4 shadow-sm">
                                 <p className="text-2xl font-bold text-gray-950">Fast</p>
-                                <p className="text-sm text-gray-500">Support</p>
+                                <p className="text-sm text-gray-500">Support 24/7</p>
                             </div>
                         </div>
                     </div>
@@ -116,7 +116,7 @@ export default function Home() {
                     <div className="relative">
                         <div className="absolute inset-0 rounded-full bg-cyan-200/40 blur-3xl" />
 
-                        <div className="relative mx-auto max-w-md rounded-[2rem] border border-gray-100 bg-white/70 p-6 shadow-2xl shadow-cyan-900/10 backdrop-blur">
+                        <div className="relative mx-auto max-w-md rounded-4xl border border-gray-100 bg-white/70 p-6 shadow-2xl shadow-cyan-900/10 backdrop-blur">
                             <div className="absolute -right-6 -top-6 rounded-2xl bg-white px-4 py-3 shadow-xl">
                                 <p className="text-xs font-medium text-gray-500">Featured</p>
                                 <p className="text-sm font-bold text-gray-900">BPC-157</p>
