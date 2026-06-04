@@ -67,14 +67,6 @@ export default function SS_31() {
                             <p className="text mt-2">
                                 SS:31 is researched for its role in supporting mitochondrial function — the energy-producing systems inside your cells. Rather than overstimulating the body, the focus is on improving cellular efficiency, resilience, and recovery support through targeted mitochondrial protection and performance optimization.
                             </p>
-                            <Button
-                                text="Purchase SS:31 Now"
-                                className="mt-4"
-                                onClick={() => {
-                                    addToCart(product);
-                                    navigate("/cart");
-                                }}
-                            />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center w-full">
@@ -111,7 +103,7 @@ export default function SS_31() {
                                 {/* CTA */}
                                 <button onClick={() => {
                                     addToCart(product);
-                                    navigate("/cart");
+                                    navigate("/checkout");
                                 }}
                                     className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-3 font-semibold flex items-center justify-center gap-2 transition">
                                     <Lock size={18} />
@@ -124,9 +116,7 @@ export default function SS_31() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </section>
 
@@ -188,19 +178,6 @@ export default function SS_31() {
                         </div>
 
                     </div>
-
-                    {/* CTA */}
-                    <div className="flex justify-center mt-8">
-                        <Button
-                            text="Purchase SS:31 Now"
-                            className="mt-4"
-                            onClick={() => {
-                                addToCart(product);
-                                navigate("/cart");
-                            }}
-                        />
-                    </div>
-
                 </div>
             </section>
 
@@ -241,13 +218,11 @@ export default function SS_31() {
                                 className="mt-4"
                                 onClick={() => {
                                     addToCart(product);
-                                    navigate("/cart");
+                                    navigate("/checkout");
                                 }}
                             />
                         </div>
-
                     </div>
-
                 </div>
             </section>
 
@@ -275,19 +250,6 @@ export default function SS_31() {
                         ))}
 
                     </div>
-
-                    {/* BUTTON */}
-                    <div className="mt-12 flex justify-center">
-                        <Button
-                            text="Purchase SS:31 Now"
-                            className="mt-4"
-                            onClick={() => {
-                                addToCart(product);
-                                navigate("/cart");
-                            }}
-                        />
-                    </div>
-
                 </div>
             </section>
 

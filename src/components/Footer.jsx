@@ -5,15 +5,23 @@ export default function Footer() {
     const links = [
         { name: "Home", path: "/" },
         { name: "Contact Us", path: "/contact" },
-        { name: "Cart", path: "/cart" },
+        // { name: "Cart", path: "/cart" },
         { name: "Questionnaire", path: "/questionnaire" },
         { name: "My Account", path: "/account" },
+    ];
+
+    const policy = [
+        { name: "Privacy Policy", path: "/privacy-Policy" },
+        { name: "Terms of Service", path: "/termServices" },
+        { name: "Disclaimer", path: "/disclaimer" },
+        { name: "Shipping Policy", path: "/shipping" },
+        { name: "Return Policy", path: "/return" },
     ];
 
     return (
         <footer className="bg-white border-t border-gray-200">
             <div className="max-w-7xl mx-auto px-4 py-14">
-                <div className="grid gap-10 lg:grid-cols-[1.2fr_0.7fr_1.1fr] md:grid-cols-2">
+                <div className="grid gap-10 lg:grid-cols-4 md:grid-cols-2">
                     {/* BRAND */}
                     <div>
                         <Link to="/" className="inline-flex items-center">
@@ -68,6 +76,23 @@ export default function Footer() {
                         </ul>
                     </div>
 
+                    <div>
+                        <h3 className="text-base font-semibold text-gray-900">Policies</h3>
+                        <ul className="mt-5 space-y-3">
+                            {policy.map((item) => (
+                                <li key={item.name}>
+                                    <Link
+                                        to={item.path}
+                                        className="group inline-flex items-center gap-2 text-sm text-gray-600 hover:text-black transition"
+                                    >
+                                        <ArrowRight size={14} className="opacity-0 -ml-4 group-hover:opacity-100 group-hover:ml-0 transition-all" />
+                                        {item.name}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
                     {/* CONTACT CARD */}
                     <div className="">
                         <h3 className="text-base font-semibold text-gray-900">Get in touch</h3>
@@ -93,31 +118,19 @@ export default function Footer() {
                                 <span>info@gmail.com</span>
                             </a>
 
-                            <div className="flex gap-3 text-sm text-gray-600">
+                            {/* <div className="flex gap-3 text-sm text-gray-600">
                                 <MapPin size={18} className="mt-0.5 shrink-0 text-(--primary-color)" />
                                 <span>125 Mercer Street, New York</span>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 </div>
 
                 {/* BOTTOM */}
-                <div className="mt-12 pt-6 border-t border-gray-200 flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
-                    <p className="text-sm text-gray-500">
+                <div className="md:mt-12 mt-6 pt-6 border-t border-gray-200">
+                    <p className="text-sm text-gray-500 text-center">
                         © {new Date().getFullYear()} Peptide. All rights reserved.
                     </p>
-
-                    <div className="flex items-center gap-5 text-sm text-gray-500">
-                        <Link to="/privacy-Policy" className="hover:text-black transition">
-                            Privacy Policy
-                        </Link>
-                        <Link to="/termServices" className="hover:text-black transition">
-                            Terms of Service
-                        </Link>
-                        <Link to="/disclaimer" className="hover:text-black transition">
-                            Disclaimer
-                        </Link>
-                    </div>
                 </div>
             </div>
         </footer>

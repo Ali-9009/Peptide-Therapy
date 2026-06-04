@@ -17,7 +17,7 @@ export default function Contact() {
     return (
         <main className="min-h-screen text-zinc-950">
             <section className="mx-auto grid max-w-6xl gap-10 px-6 py-16 md:grid-cols-[0.9fr_1.1fr] md:px-10 lg:py-24">
-                <div className="flex flex-col justify-between gap-10">
+                <div className="flex flex-col justify-center gap-10">
                     <div>
                         <p className="mb-4 text-sm font-medium uppercase tracking-[0.24em] text-zinc-500">
                             Contact us
@@ -34,7 +34,6 @@ export default function Contact() {
                     <div className="grid gap-4">
                         <InfoItem icon={<Mail size={18} />} label="Email" value="info@gmail.com" />
                         <InfoItem icon={<Phone size={18} />} label="Phone" value="+1 (555) 240-0188" />
-                        <InfoItem icon={<MapPin size={18} />} label="Office" value="125 Mercer Street, New York" />
                         <InfoItem icon={<Clock size={18} />} label="Hours" value="Mon–Fri, 9:00 AM – 6:00 PM" />
                     </div>
                 </div>

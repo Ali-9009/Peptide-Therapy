@@ -29,8 +29,7 @@ import CjC_1295 from "./pages/CjC_1295";
 import Epithalon from "./pages/Epithalon";
 import AOD_9604 from "./pages/AOD";
 import Bac from "./pages/Bac";
-import Cart from "./pages/Cart";
-import Checkout from "./pages/Checkout";
+// import Cart from "./pages/Cart";
 import Contact from "./pages/Contact";
 import Bpc_157 from "./pages/Bpc_157";
 import PrivacyPolicy from "./pages/Policies/PrivacyPolicy";
@@ -46,65 +45,75 @@ import AuthLayout from "./Layout/AuthLayout";
 import Questionnaire from "./pages/questionnaire/Questionnaire";
 import LanguageModal from "./pages/LanguageModal";
 import Account from "./pages/Account";
-import Checkout2 from "./pages/Checkout2";
+import Checkout from "./pages/Checkout";
+import Checkout0 from "./pages/Checkout0";
+import Shipping from "./pages/Policies/Shipping";
+import Return from "./pages/Policies/Return";
 
 
 function AnimatedRoutes() {
   const location = useLocation();
 
   return (
-    <AnimatePresence mode="wait">
+
+    <>
       <LanguageModal />
-      <Routes location={location} key={location.pathname}>
 
-        {/* Website Pages */}
-        <Route element={<Layout />}>
-          <Route path="/" element={<Home />} />
-          <Route path="/slu-pp-322" element={<SLU_PP />} />
-          <Route path="/ghk-cu" element={<GHK_CU />} />
-          <Route path="/ss-31" element={<SS_31 />} />
-          <Route path="/tb-500" element={<TB_500 />} />
-          <Route path="/tesamorelin" element={<Tesamorelin />} />
-          <Route path="/ipamorelin" element={<Ipamorelin />} />
-          <Route path="/thymulin" element={<Thymulin />} />
-          <Route path="/kisspetin" element={<Kisspetin />} />
-          <Route path="/retatrutide" element={<Retatrutide />} />
-          <Route path="/semaglutide" element={<Semaglutide />} />
-          <Route path="/tirzepatide" element={<Tirzepatide />} />
-          <Route path="/5-amino-1mq" element={<AMINO />} />
-          <Route path="/melanotan" element={<Melanotan />} />
-          <Route path="/mots-c" element={<MOTS_c />} />
-          <Route path="/pt-141" element={<PT141 />} />
-          <Route path="/kpv" element={<KPV />} />
-          <Route path="/nad+" element={<Nad />} />
-          <Route path="/cjc-1295" element={<CjC_1295 />} />
-          <Route path="/epithalon" element={<Epithalon />} />
-          <Route path="/aod-9604" element={<AOD_9604 />} />
-          <Route path="/bac-water" element={<Bac />} />
-          <Route path="/cart" element={<Cart />} />
-          <Route path="/checkout" element={<Checkout />} />
-          <Route path="/checkout2" element={<Checkout2 />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/bpc-157" element={<Bpc_157 />} />
-          <Route path="/privacy-Policy" element={<PrivacyPolicy />} />
-          <Route path="/termServices" element={<TermsService />} />
-          <Route path="/disclaimer" element={<Disclaimer />} />
-          <Route path="/questionnaire" element={<Questionnaire />} />
-          <Route path="/account" element={<Account />} />
-        </Route>
+      <AnimatePresence mode="wait">
+        <Routes location={location} key={location.pathname}>
 
-        {/* Auth Pages */}
-        <Route element={<AuthLayout />}>
-          <Route path="/login" element={<Login />} />
-          <Route path="/forgotPassword" element={<ForgotPassword />} />
-          <Route path="/setNew" element={<SetNew />} />
-          <Route path="/signUp" element={<Signup />} />
-          <Route path="/verifyCode" element={<VerifyCode />} />
-          {/* <Route path="/front" element={<Front />} /> */}
-        </Route>
+          {/* Website Pages */}
+          <Route element={<Layout />}>
+            <Route path="/" element={<Home />} />
+            <Route path="/slu-pp-322" element={<SLU_PP />} />
+            <Route path="/ghk-cu" element={<GHK_CU />} />
+            <Route path="/ss-31" element={<SS_31 />} />
+            <Route path="/tb-500" element={<TB_500 />} />
+            <Route path="/tesamorelin" element={<Tesamorelin />} />
+            <Route path="/ipamorelin" element={<Ipamorelin />} />
+            <Route path="/thymulin" element={<Thymulin />} />
+            <Route path="/kisspetin" element={<Kisspetin />} />
+            <Route path="/retatrutide" element={<Retatrutide />} />
+            <Route path="/semaglutide" element={<Semaglutide />} />
+            <Route path="/tirzepatide" element={<Tirzepatide />} />
+            <Route path="/5-amino-1mq" element={<AMINO />} />
+            <Route path="/melanotan" element={<Melanotan />} />
+            <Route path="/mots-c" element={<MOTS_c />} />
+            <Route path="/pt-141" element={<PT141 />} />
+            <Route path="/kpv" element={<KPV />} />
+            <Route path="/nad+" element={<Nad />} />
+            <Route path="/cjc-1295" element={<CjC_1295 />} />
+            <Route path="/epithalon" element={<Epithalon />} />
+            <Route path="/aod-9604" element={<AOD_9604 />} />
+            <Route path="/bac-water" element={<Bac />} />
+            {/* <Route path="/cart" element={<Cart />} /> */}
+            <Route path="/checkout0" element={<Checkout0 />} />
+            <Route path="/checkout" element={<Checkout />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/bpc-157" element={<Bpc_157 />} />
+            <Route path="/privacy-Policy" element={<PrivacyPolicy />} />
+            <Route path="/termServices" element={<TermsService />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/shipping" element={<Shipping />} />
+            <Route path="/return" element={<Return />} />
+            <Route path="/questionnaire" element={<Questionnaire />} />
+            <Route path="/account" element={<Account />} />
+          </Route>
 
-      </Routes>
-    </AnimatePresence>
+          {/* Auth Pages */}
+          <Route element={<AuthLayout />}>
+            <Route path="/login" element={<Login />} />
+            <Route path="/forgotPassword" element={<ForgotPassword />} />
+            <Route path="/setNew" element={<SetNew />} />
+            <Route path="/signUp" element={<Signup />} />
+            <Route path="/verifyCode" element={<VerifyCode />} />
+            {/* <Route path="/front" element={<Front />} /> */}
+          </Route>
+
+        </Routes>
+      </AnimatePresence>
+    </>
+
   );
 }
 

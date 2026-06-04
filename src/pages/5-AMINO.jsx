@@ -66,14 +66,9 @@ export default function AMINO() {
                         {/* TEXT */}
                         <div className="order-2 lg:order-1">
 
-                            <div className="flex items-center justify-between">
-                                <h1 className="heading">
-                                    5-AMINO-1MQ
-                                </h1>
-                                <p className="text-3xl font-bold text-(--primary-color)">
-                                    ${product.price}
-                                </p>
-                            </div>
+                            <h1 className="heading">
+                                5-AMINO-1MQ
+                            </h1>
 
                             <p className="text font-semibold mt-2">
                                 Recovery-focused peptide support designed to assist mobility, repair, and resilience.
@@ -81,14 +76,6 @@ export default function AMINO() {
                             <p className="text mt-2">
                                 5-AMINO-1MQ is researched for its role in supporting recovery processes, tissue repair signaling, and overall physical resilience. Rather than forcing unnatural stimulation, the focus is on helping the body maintain efficient recovery, flexibility, and performance support through regenerative and recovery-oriented pathways.
                             </p>
-                            <Button
-                                text="Purchase 5-AMINO-1MQ Now"
-                                className="mt-4"
-                                onClick={() => {
-                                    addToCart(product);
-                                    navigate("/cart");
-                                }}
-                            />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center w-full">
@@ -125,7 +112,7 @@ export default function AMINO() {
                                 {/* CTA */}
                                 <button onClick={() => {
                                     addToCart(product);
-                                    navigate("/cart");
+                                    navigate("/checkout");
                                 }}
                                     className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-3 font-semibold flex items-center justify-center gap-2 transition">
                                     <Lock size={18} />
@@ -168,19 +155,6 @@ export default function AMINO() {
                         ))}
 
                     </div>
-
-                    {/* BUTTON */}
-                    <div className="mt-12 flex justify-center">
-                        <Button
-                            text="Purchase 5-AMINO-1MQ Now"
-                            className="mt-4"
-                            onClick={() => {
-                                addToCart(product);
-                                navigate("/cart");
-                            }}
-                        />
-                    </div>
-
                 </div>
             </section>
 
@@ -221,13 +195,11 @@ export default function AMINO() {
                                 className="mt-4"
                                 onClick={() => {
                                     addToCart(product);
-                                    navigate("/cart");
+                                    navigate("/checkout");
                                 }}
                             />
                         </div>
-
                     </div>
-
                 </div>
             </section>
 
@@ -259,7 +231,7 @@ export default function AMINO() {
                                 className="mt-4"
                                 onClick={() => {
                                     addToCart(product);
-                                    navigate("/cart");
+                                    navigate("/checkout");
                                 }}
                             />
                         </div>

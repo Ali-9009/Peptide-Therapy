@@ -53,14 +53,6 @@ export default function SLU_PP() {
                             <p className="text mt-2">
                                 SLU-PP-322 is primarily used to support metabolic activity, endurance, and energy utilization through pathways associated with mitochondrial performance and fat metabolism. The focus isn’t extreme transformation — it’s steady support for performance, recovery, and long-term consistency with realistic expectations and a safety-first approach.
                             </p>
-                            <Button
-                                text="Purchase SLU-PP-322 Now"
-                                className="mt-4"
-                                onClick={() => {
-                                    addToCart(product);
-                                    navigate("/cart");
-                                }}
-                            />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center w-full">
@@ -97,7 +89,7 @@ export default function SLU_PP() {
                                 {/* CTA */}
                                 <button onClick={() => {
                                     addToCart(product);
-                                    navigate("/cart");
+                                    navigate("/checkout");
                                 }}
                                     className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-3 font-semibold flex items-center justify-center gap-2 transition">
                                     <Lock size={18} />
@@ -110,9 +102,7 @@ export default function SLU_PP() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </section>
 
@@ -163,19 +153,6 @@ export default function SLU_PP() {
                         />
 
                     </div>
-
-                    {/* CTA */}
-                    <div className="flex justify-center mt-10">
-                        <Button
-                            text="Purchase SLU-PP-322 Now"
-                            className="mt-4"
-                            onClick={() => {
-                                addToCart(product);
-                                navigate("/cart");
-                            }}
-                        />
-                    </div>
-
                 </div>
             </section>
 
@@ -214,13 +191,11 @@ export default function SLU_PP() {
                                 className="mt-4"
                                 onClick={() => {
                                     addToCart(product);
-                                    navigate("/cart");
+                                    navigate("/checkout");
                                 }}
                             />
                         </div>
-
                     </div>
-
                 </div>
             </section>
 

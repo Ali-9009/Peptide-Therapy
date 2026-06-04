@@ -74,14 +74,6 @@ export default function TB_500() {
                             <p className="text mt-2">
                                 TB500 is researched for its role in supporting recovery processes, tissue repair signaling, and overall physical resilience. Rather than forcing unnatural stimulation, the focus is on helping the body maintain efficient recovery, flexibility, and performance support through regenerative and recovery-oriented pathways.
                             </p>
-                            <Button
-                                text="Purchase TB500 Now"
-                                className="mt-4"
-                                onClick={() => {
-                                    addToCart(product);
-                                    navigate("/cart");
-                                }}
-                            />
                         </div>
 
                         <div className="order-1 lg:order-2 flex justify-center w-full">
@@ -118,7 +110,7 @@ export default function TB_500() {
                                 {/* CTA */}
                                 <button onClick={() => {
                                     addToCart(product);
-                                    navigate("/cart");
+                                    navigate("/checkout");
                                 }}
                                     className="w-full bg-blue-600 hover:bg-blue-700 text-white rounded-xl py-3 font-semibold flex items-center justify-center gap-2 transition">
                                     <Lock size={18} />
@@ -131,9 +123,7 @@ export default function TB_500() {
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </section>
 
@@ -169,11 +159,10 @@ export default function TB_500() {
                             className="mt-4"
                             onClick={() => {
                                 addToCart(product);
-                                navigate("/cart");
+                                navigate("/checkout");
                             }}
                         />
                     </div>
-
                 </div>
             </section>
 
@@ -214,13 +203,11 @@ export default function TB_500() {
                                 className="mt-4"
                                 onClick={() => {
                                     addToCart(product);
-                                    navigate("/cart");
+                                    navigate("/checkout");
                                 }}
                             />
                         </div>
-
                     </div>
-
                 </div>
             </section>
 
@@ -252,7 +239,7 @@ export default function TB_500() {
                                 className="mt-4"
                                 onClick={() => {
                                     addToCart(product);
-                                    navigate("/cart");
+                                    navigate("/checkout");
                                 }}
                             />
                         </div>
@@ -264,9 +251,7 @@ export default function TB_500() {
                                 className="w-full h-full object-cover rounded-xl"
                             />
                         </div>
-
                     </div>
-
                 </div>
             </section>
 

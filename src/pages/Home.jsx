@@ -83,14 +83,14 @@ export default function Home() {
                         </p>
 
                         <div className="mt-8 flex flex-wrap items-center gap-4">
-                            <Button text="Contact Us" />
+                            <Button to="/contact" text="Contact Us" />
 
-                            <a
+                            {/* <a
                                 href="#products"
                                 className="rounded-full border border-gray-200 bg-white px-6 py-3 text-sm font-semibold text-gray-800 shadow-sm transition hover:border-cyan-300 hover:text-cyan-700 hover:shadow-md"
                             >
                                 View Collection
-                            </a>
+                            </a> */}
                         </div>
 
                         {/* Trust Row */}
@@ -117,15 +117,15 @@ export default function Home() {
                         <div className="absolute inset-0 rounded-full bg-cyan-200/40 blur-3xl" />
 
                         <div className="relative mx-auto max-w-md rounded-4xl border border-gray-100 bg-white/70 p-6 shadow-2xl shadow-cyan-900/10 backdrop-blur">
-                            <div className="absolute -right-6 -top-6 rounded-2xl bg-white px-4 py-3 shadow-xl">
+                            <div className="absolute -right-6 -top-6 rounded-2xl bg-white px-4 py-3 z-1 shadow-xl">
                                 <p className="text-xs font-medium text-gray-500">Featured</p>
                                 <p className="text-sm font-bold text-gray-900">BPC-157</p>
                             </div>
 
                             <img
-                                src="assets/bpc-2.png"
+                                src="assets/hero.png"
                                 alt="Premium peptide product"
-                                className="mx-auto w-full drop-shadow-2xl"
+                                className="mx-auto w-full drop-shadow-xl rounded-xl"
                             />
 
                             <div className="mt-6 rounded-2xl bg-gray-50 p-4">

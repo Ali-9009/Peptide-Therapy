@@ -15,7 +15,7 @@ import Button from "../components/PrimaryBtn";
 import { useCart } from "../context/CartContext";
 
 export default function Cart() {
-    const { cartItems, removeFromCart, updateQty } = useCart();
+    const { cartItems, removeFromCart, updateQty, } = useCart();
     const navigate = useNavigate();
 
     const items = cartItems;
@@ -169,12 +169,63 @@ export default function Cart() {
                     </section>
 
                     <aside className="lg:sticky lg:top-22 lg:self-start">
+
                         <div className="rounded-xl p-4 shadow-md ring-1 ring-gray-200">
                             <div className="mb-6 flex items-center justify-between">
                                 <h2 className="text-lg font-semibold">Order Summary</h2>
                                 <span className="rounded-full px-3 py-1 text-xs font-bold bg-lime-300/30 text-lime-500">
                                     Protected
                                 </span>
+                            </div>
+
+                            <div className="my-6 space-y-4">
+                                {cartItems.map((item) => (
+                                    <div key={item.id} className="flex gap-4">
+                                        <img
+                                            src={item.image}
+                                            alt={item.name}
+                                            className="h-20 w-20 rounded-2xl object-cover ring-1 ring-gray-200"
+                                        />
+
+                                        <div className="flex flex-1 justify-between gap-3">
+                                            <div>
+                                                <h3 className="font-medium leading-snug">{item.name}</h3>
+                                                <p className="mt-1 text-sm text-gray-500">{item.variant}</p>
+
+                                                <div className="mt-3 flex items-center gap-3">
+                                                    <div className="flex items-center rounded-full border border-slate-200 bg-white p-1 shadow-sm">
+                                                        <button
+                                                            onClick={() => updateQty(item.id, -1)}
+                                                            className="grid h-7 w-7 place-items-center rounded-full transition hover:bg-slate-100"
+                                                        >
+                                                            <Minus size={14} />
+                                                        </button>
+
+                                                        <span className="w-8 text-center text-sm font-bold">
+                                                            {item.qty}
+                                                        </span>
+
+                                                        <button
+                                                            onClick={() => updateQty(item.id, 1)}
+                                                            className="grid h-7 w-7 place-items-center rounded-full transition hover:bg-slate-100"
+                                                        >
+                                                            <Plus size={14} />
+                                                        </button>
+                                                    </div>
+
+                                                    <button
+                                                        onClick={() => removeFromCart(item.id)}
+                                                        className="text-rose-600 transition hover:text-rose-700"
+                                                    >
+                                                        <Trash2 size={16} />
+                                                    </button>
+                                                </div>
+                                            </div>
+
+                                            <p className="font-semibold">${item.price * item.qty}</p>
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
 
                             <div className="space-y-4 border-b border-gray-300 pb-5 text-sm">

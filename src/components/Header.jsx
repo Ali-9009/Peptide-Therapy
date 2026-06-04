@@ -341,7 +341,7 @@ export default function Header() {
 
                         {/* Cart Button */}
                         <Button
-                            to="/cart"
+                            to="/checkout"
                             className="p-3! rounded-full flex items-center justify-center"
                             text={<ShoppingCart size={20} />}
                         />
