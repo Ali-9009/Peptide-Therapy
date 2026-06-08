@@ -44,6 +44,9 @@ export default function CheckoutSteps({ items = [] }) {
     const [phoneError, setPhoneError] = useState("");
     const [isSending, setIsSending] = useState(false);
 
+    const [codeSent, setCodeSent] = useState(false);
+    const [otp, setOtp] = useState("");
+
     const validatePhone = (value) => {
         const cleanValue = value.replace(/\D/g, "");
 
@@ -74,7 +77,7 @@ export default function CheckoutSteps({ items = [] }) {
 
         setTimeout(() => {
             setIsSending(false);
-            setStep(2);
+            setCodeSent(true); // show OTP field
         }, 800);
     };
 
@@ -206,12 +209,54 @@ export default function CheckoutSteps({ items = [] }) {
                                 {cartError}
                             </p>
                         )}
-                        <Button
-                            text={items.length === 0 ? "Select Product First" : isSending ? "Sending Code..." : "Send Verification Code"}
-                            className="w-full mt-2"
-                            onClick={handleSendCode}
-                            disabled={isSending || items.length === 0}
-                        />
+
+                        
+                        {!codeSent && (
+                            <Button
+                                text={
+                                    items.length === 0
+                                        ? "Select Product First"
+                                        : isSending
+                                            ? "Sending Code..."
+                                            : "Send Verification Code"
+                                }
+                                className="w-full mt-2"
+                                onClick={handleSendCode}
+                                disabled={isSending || items.length === 0}
+                            />
+                        )}
+
+                        {codeSent && (
+                            <div className="mt-5 rounded-xl border border-blue-100 bg-blue-50 p-4">
+                                <label className="mb-2 block text-sm font-semibold text-slate-700">
+                                    Enter Verification Code
+                                </label>
+
+                                <input
+                                    type="text"
+                                    value={otp}
+                                    onChange={(e) => setOtp(e.target.value)}
+                                    placeholder="6-digit code"
+                                    className="w-full rounded-xl border border-gray-300 bg-white px-4 py-3 text-slate-900 outline-none focus:border-blue-500 focus:ring-4 focus:ring-blue-100"
+                                />
+
+                                <Button
+                                    text="Verify & Continue"
+                                    className="w-full mt-3"
+                                    onClick={() => setStep(2)}
+                                />
+
+                                <button
+                                    type="button"
+                                    onClick={handleSendCode}
+                                    className="mt-3 w-full text-sm font-semibold text-blue-600 hover:text-blue-700"
+                                >
+                                    Resend code
+                                </button>
+                            </div>
+                        )}
+
+                        
 
                     </div>
                 </div>
